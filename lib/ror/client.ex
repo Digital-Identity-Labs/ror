@@ -8,7 +8,7 @@ defmodule ROR.Client do
     Req.new(base_url: @default_url, http_errors: :raise)
   end
 
-  def get!(id) do
+  def get!(id, opts \\ []) do
     Req.get!(http(), url: ID.path(id)).body
   end
 
