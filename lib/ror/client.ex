@@ -12,4 +12,8 @@ defmodule ROR.Client do
     Req.get!(http(), url: ID.path(id)).body
   end
 
+  def list!(opts \\ [params: []]) do
+    Req.get!(http(), params: opts[:params]).body
+  end
+
 end
