@@ -2,6 +2,10 @@ defmodule ROR.ID do
 
   @id_regex ~r/^0[a-hj-km-np-tv-z|0-9]{6}[0-9]{2}$/
 
+  def extract(data) do
+    data["id"]
+  end
+
   def normalize(id) do
     "https://ror.org/" <> minimize(id)
   end

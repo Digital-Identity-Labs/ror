@@ -1,115 +1,174 @@
 {
-  "admin": {
-    "created": {
-      "date": "2018-11-14",
-      "schema_version": "1.0"
-    },
-    "last_modified": {
-      "date": "2024-12-11",
-      "schema_version": "2.1"
-    }
-  },
-  "domains": [],
-  "established": 1899,
-  "external_ids": [
+  "locations": [
     {
-      "all": [
-        "501100002509",
-        "501100006017"
-      ],
-      "preferred": "501100002509",
-      "type": "fundref"
-    },
-    {
-      "all": [
-        "grid.412091.f"
-      ],
-      "preferred": "grid.412091.f",
-      "type": "grid"
-    },
-    {
-      "all": [
-        "0000 0001 0669 3109"
-      ],
-      "preferred": null,
-      "type": "isni"
-    },
-    {
-      "all": [
-        "Q483402"
-      ],
-      "preferred": null,
-      "type": "wikidata"
+      "geonames_id": 5378538,
+      "geonames_details": {
+        "country_code": "US",
+        "country_name": "United States",
+        "lat": 37.802168,
+        "lng": -122.271281,
+        "name": "Oakland"
+      }
     }
   ],
-  "id": "https://ror.org/00tjv0s33",
+  "established": 1868,
+  "external_ids": [
+    {
+      "type": "fundref",
+      "all": [
+        "100005595",
+        "100009350",
+        "100004802",
+        "100010574",
+        "100005188",
+        "100005192"
+      ],
+      "preferred": "100005595"
+    },
+    {
+      "type": "grid",
+      "all": [
+        "grid.30389.31"
+      ],
+      "preferred": "grid.30389.31"
+    },
+    {
+      "type": "isni",
+      "all": [
+        "0000 0001 2348 0690"
+      ],
+      "preferred": null
+    }
+  ],
+  "id": "https://ror.org/00pjdza24",
+  "domains": [
+    "universityofcalifornia.edu"
+  ],
   "links": [
     {
       "type": "website",
-      "value": "http://www.kmu.ac.kr/main.jsp"
+      "value": "http://www.universityofcalifornia.edu/"
     },
     {
       "type": "wikipedia",
-      "value": "http://en.wikipedia.org/wiki/Keimyung_University"
-    }
-  ],
-  "locations": [
-    {
-      "geonames_details": {
-        "continent_code": "AS",
-        "continent_name": "Asia",
-        "country_code": "KR",
-        "country_name": "South Korea",
-        "country_subdivision_code": "27",
-        "country_subdivision_name": "Daegu",
-        "lat": 35.87028,
-        "lng": 128.59111,
-        "name": "Daegu"
-      },
-      "geonames_id": 1835329
+      "value": "http://en.wikipedia.org/wiki/University_of_California"
     }
   ],
   "names": [
     {
-      "lang": null,
+      "value": "UC",
       "types": [
         "acronym"
       ],
-      "value": "KMU"
+      "lang": "en"
     },
     {
-      "lang": null,
+      "value": "UC System",
       "types": [
         "alias"
       ],
-      "value": "Kei-dae"
+      "lang": "en"
     },
     {
-      "lang": "en",
+      "value": "University of California System",
       "types": [
         "ror_display",
         "label"
       ],
-      "value": "Keimyung University"
+      "lang": "en"
     },
     {
-      "lang": "ko",
+      "value": "Université de Californie",
       "types": [
         "label"
       ],
-      "value": "계명대학교"
+      "lang": "fr"
     }
   ],
   "relationships": [
     {
-      "label": "Keimyung University Dongsan Medical Center",
-      "type": "related",
-      "id": "https://ror.org/035r7hb75"
+      "id": "https://ror.org/02jbv0t02",
+      "label": "Lawrence Berkeley National Laboratory",
+      "type": "related"
+    },
+    {
+      "id": "https://ror.org/03yrm5c26",
+      "label": "California Digital Library",
+      "type": "child"
+    },
+    {
+      "id": "https://ror.org/00zv0wd17",
+      "label": "Center for Information Technology Research in the Interest of Society",
+      "type": "child"
+    },
+    {
+      "id": "https://ror.org/03t0t6y08",
+      "label": "University of California Division of Agriculture and Natural Resources",
+      "type": "child"
+    },
+    {
+      "id": "https://ror.org/01an7q238",
+      "label": "University of California, Berkeley",
+      "type": "child"
+    },
+    {
+      "id": "https://ror.org/05rrcem69",
+      "label": "University of California, Davis",
+      "type": "child"
+    },
+    {
+      "id": "https://ror.org/04gyf1771",
+      "label": "University of California, Irvine",
+      "type": "child"
+    },
+    {
+      "id": "https://ror.org/046rm7j60",
+      "label": "University of California, Los Angeles",
+      "type": "child"
+    },
+    {
+      "id": "https://ror.org/00d9ah105",
+      "label": "University of California, Merced",
+      "type": "child"
+    },
+    {
+      "id": "https://ror.org/03nawhv43",
+      "label": "University of California, Riverside",
+      "type": "child"
+    },
+    {
+      "id": "https://ror.org/0168r3w48",
+      "label": "University of California, San Diego",
+      "type": "child"
+    },
+    {
+      "id": "https://ror.org/043mz5j54",
+      "label": "University of California, San Francisco",
+      "type": "child"
+    },
+    {
+      "id": "https://ror.org/02t274463",
+      "label": "University of California, Santa Barbara",
+      "type": "child"
+    },
+    {
+      "id": "https://ror.org/03s65by71",
+      "label": "University of California, Santa Cruz",
+      "type": "child"
     }
   ],
   "status": "active",
   "types": [
-    "education",
-    "funder"
-  ]
+    "education"
+  ],
+  "admin": {
+    "created": {
+      "date": "2020-04-25",
+      "schema_version": "1.0"
+    },
+    "last_modified": {
+      "date": "2022-10-18",
+      "schema_version": "2.0"
+    }
+  }
 }
