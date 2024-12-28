@@ -1,5 +1,7 @@
 defmodule ROR.ID do
 
+  @id_regex ~r/^0[a-hj-km-np-tv-z|0-9]{6}[0-9]{2}$/
+
   def normalize(id) do
     "https://ror.org/" <> minimize(id)
   end
@@ -12,6 +14,15 @@ defmodule ROR.ID do
 
   def path(id) do
     "/#{minimize(id)}"
+  end
+
+  def valid?(id) do
+    try do
+      mid = minimize(id)
+      String.match?(mid, @id_regex)
+    rescue
+      _ -> false
+    end
   end
 
   defp strip("https://ror.org/" <> id) do
