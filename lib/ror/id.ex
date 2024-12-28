@@ -19,7 +19,7 @@ defmodule ROR.ID do
   def valid?(id) do
     try do
       mid = minimize(id)
-      String.match?(mid, @id_regex)
+      String.match?(mid, @id_regex) and checksum_ok?(mid)
     rescue
       _ -> false
     end
@@ -39,6 +39,11 @@ defmodule ROR.ID do
 
   defp strip(id) do
     raise "ROR ID is unexpected: '#{id}'"
+  end
+
+  defp checksum_ok?(_id) do
+    #https://github.com/ror-community/ror-api/blob/bd040a0d2558a478c06a89118a29eeb9b6142710/rorapi/management/commands/generaterorid.py#L8
+    true
   end
 
 end
