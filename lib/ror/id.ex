@@ -29,6 +29,10 @@ defmodule ROR.ID do
     end
   end
 
+  def vocab do
+    []
+  end
+
   defp strip("https://ror.org/" <> id) do
     strip(id)
   end

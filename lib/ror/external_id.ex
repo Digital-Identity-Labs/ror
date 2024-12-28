@@ -19,4 +19,8 @@ defmodule ROR.ExternalID do
     end
   end
 
+  def vocab do
+    [:fundref, :grid, :isni, :wikidata]
+  end
+
 end

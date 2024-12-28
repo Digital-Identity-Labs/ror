@@ -43,4 +43,8 @@ defmodule ROR.Organization do
     }
   end
 
+  def vocab do
+    []
+  end
+
 end

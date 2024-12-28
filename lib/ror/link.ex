@@ -17,4 +17,8 @@ defmodule ROR.Link do
     end
   end
 
+  def vocab do
+    []
+  end
+
 end

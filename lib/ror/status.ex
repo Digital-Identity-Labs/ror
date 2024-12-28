@@ -6,4 +6,10 @@ defmodule ROR.Status do
     String.to_atom(data["status"])
   end
 
+  def vocab do
+    [:active, :inactive, :withdrawn]
+  end
+
 end
+
+

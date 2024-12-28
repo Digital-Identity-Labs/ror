@@ -20,4 +20,8 @@ defmodule ROR.Relationship do
     end
   end
 
+  def vocab do
+    [:related, :parent, :child, :predecessor, :successor]
+  end
+
 end

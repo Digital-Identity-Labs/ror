@@ -19,4 +19,8 @@ defmodule ROR.Name do
     end
   end
 
+  def vocab do
+    [:acronym, :alias, :label, :ror_display]
+  end
+
 end

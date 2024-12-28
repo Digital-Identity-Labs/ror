@@ -12,4 +12,8 @@ defmodule ROR.Domain do
     |> Enum.map(fn d -> d end)
   end
 
+  def vocab do
+    []
+  end
+
 end

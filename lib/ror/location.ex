@@ -37,4 +37,8 @@ defmodule ROR.Location do
     end
   end
 
+  def vocab do
+    [:geonames]
+  end
+
 end

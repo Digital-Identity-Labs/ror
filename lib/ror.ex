@@ -8,5 +8,10 @@ defmodule ROR do
     |> Organization.extract()
   end
 
+  def list!(opts \\ [params: []]) do
+    Client.list!(opts)
+    |> Map.get("items", [])
+    |> Enum.map(fn d -> Organization.extract(d) end)
+  end
 
 end
