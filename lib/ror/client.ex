@@ -15,10 +15,10 @@ defmodule ROR.Client do
   @default_get_options  @common_options ++ []
   @allowed_get_options  Keyword.keys(@default_get_options)
 
-  @default_list_options @common_options ++ [page: 1, filter: nil]
+  @default_list_options @common_options ++ []
   @allowed_list_options Keyword.keys(@default_list_options)
 
-  @default_query_options @common_options ++ [page: 1, filter: nil]
+  @default_query_options @common_options ++ []
   @allowed_query_options Keyword.keys(@default_query_options)
 
   @default_affiliation_options @common_options ++ []
@@ -30,6 +30,7 @@ defmodule ROR.Client do
     Keyword.merge(@default_http_options, (opts || []))
     |> Keyword.merge([user_agent: http_agent_name()])
     |> Req.new()
+    |> CurlReq.Plugin.attach()
   end
 
   def get!(id, opts \\ []) do
@@ -43,16 +44,14 @@ defmodule ROR.Client do
     opts = Keyword.merge(@default_list_options, (opts || []))
            |> Keyword.take(@allowed_list_options)
 
-    params = Keyword.merge(opts[:params], [page: opts[:page], filter: opts[:filter]])
-
-    Req.get!(http(opts[:http]), params: params).body
+    Req.get!(http(opts[:http]), params: opts[:params]).body
   end
 
   def query!(value, opts \\ []) do
     opts = Keyword.merge(@default_query_options, (opts || []))
            |> Keyword.take(@allowed_query_options)
 
-    params = Keyword.merge(opts[:params], [query: value, page: opts[:page], filter: opts[:filter]])
+    params = Keyword.merge(opts[:params], [query: value])
 
     Req.get!(http(opts[:http]), params: params).body
   end
