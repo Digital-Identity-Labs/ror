@@ -8,7 +8,7 @@ defmodule RorNameTest do
 
   describe "extract/1" do
 
-    test "returns an %Name{} struct  when passed organization data" do
+    test "returns a list of %Name{} structs when passed organization data" do
       assert [%ThisModule{} | _ ] = ThisModule.extract(@example_org_data)
     end
 

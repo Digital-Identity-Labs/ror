@@ -8,7 +8,9 @@ defmodule RorDomainTest do
 
   describe "extract/1" do
 
-
+    test "returns an array of domain strings when passed organization data" do
+      assert ["universityofcalifornia.edu"] = ThisModule.extract(@example_org_data)
+    end
 
   end
 

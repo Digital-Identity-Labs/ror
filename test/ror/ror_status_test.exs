@@ -8,7 +8,9 @@ defmodule RorStatusTest do
 
   describe "extract/1" do
 
-
+    test "returns a status atom when passed organization data" do
+      assert :active = ThisModule.extract(@example_org_data)
+    end
 
   end
 

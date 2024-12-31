@@ -8,6 +8,9 @@ defmodule RorTypeTest do
 
   describe "extract/1" do
 
+    test "returns an array of type atoms when passed organization data" do
+      assert [:education] = ThisModule.extract(@example_org_data)
+    end
 
   end
 
