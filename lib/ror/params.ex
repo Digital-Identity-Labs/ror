@@ -22,6 +22,10 @@ defmodule ROR.Params do
     Utils.escape_elastic(value)
   end
 
+  def advanced_query(value) do
+    Utils.escape_elastic(value)
+  end
+
   def page(nil) do
     1
   end

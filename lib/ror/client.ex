@@ -65,7 +65,7 @@ defmodule ROR.Client do
     Req.get!(http(opts[:http]), params: params).body
   end
 
-  def affiliation!(value, opts \\ [params: []]) do
+  def affiliation!(value, opts \\ []) do
     opts = Keyword.merge(@default_affiliation_options, (opts || []))
            |> Keyword.take(@allowed_affiliation_options)
 

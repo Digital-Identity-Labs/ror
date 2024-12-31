@@ -25,13 +25,13 @@ defmodule ROR do
   end
 
   def search!(search, opts \\ []) do
-    Client.query_advanced!(Params.query(search), Params.generate(opts))
+    Client.query_advanced!(Params.advanced_query(search), Params.generate(opts))
     |> Map.get("items", [])
     |> Enum.map(fn d -> Organization.extract(d) end)
   end
 
-  def associate!(search, opts \\ []) do
-    Client.list!(Params.query(search))
+  def affiliation!(search, opts \\ []) do
+    Client.affiliation!(Params.query(search), [])
     |> Map.get("items", [])
     |> Enum.map(fn d -> Organization.extract(d) end)
   end
