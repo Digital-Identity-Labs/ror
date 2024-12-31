@@ -14,8 +14,7 @@ defmodule ROR do
 
   def list!(opts \\ []) do
     Client.list!(Params.generate(opts))
-    |> Map.get("items", [])
-    |> Enum.map(fn d -> Organization.extract(d) end)
+    |> ROR.Results.extract()
   end
 
   def quick_search!(search, opts \\ []) do
