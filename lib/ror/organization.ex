@@ -43,6 +43,14 @@ defmodule ROR.Organization do
     }
   end
 
+  def id(%Organization{id: id} = org) do
+    ID.minimize(id)
+  end
+
+  def full_id(%Organization{id: id} = org) do
+    id
+  end
+
   def vocab do
     []
   end

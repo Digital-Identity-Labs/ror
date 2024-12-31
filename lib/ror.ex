@@ -30,12 +30,12 @@ defmodule ROR do
   end
 
   def identify!(search, opts \\ []) do
-    Client.affiliation!(Params.query(search), [])
+    Client.affiliation!(Params.query(search), opts)
     |> Matches.extract()
   end
 
   def chose_organization!(search, opts \\ []) do
-    Client.affiliation!(Params.query(search), [])
+    Client.affiliation!(Params.query(search), opts)
     |> Matches.extract()
     |> Matches.chosen_organization()
   end
