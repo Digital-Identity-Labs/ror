@@ -4,6 +4,8 @@ defmodule ROR do
   alias ROR.Organization
   alias ROR.Params
   alias ROR.Filter
+  alias ROR.Results
+  alias ROR.Matches
 
   #@http_opts_schema NimbleOptions.new!([])
 
@@ -14,25 +16,28 @@ defmodule ROR do
 
   def list!(opts \\ []) do
     Client.list!(Params.generate(opts))
-    |> ROR.Results.extract()
+    |> Results.extract()
   end
 
   def quick_search!(search, opts \\ []) do
     Client.query!(Params.query(search), Params.generate(opts))
-    |> Map.get("items", [])
-    |> Enum.map(fn d -> Organization.extract(d) end)
+    |> Results.extract()
   end
 
   def search!(search, opts \\ []) do
     Client.query_advanced!(Params.advanced_query(search), Params.generate(opts))
-    |> Map.get("items", [])
-    |> Enum.map(fn d -> Organization.extract(d) end)
+    |> Results.extract()
   end
 
-  def affiliation!(search, opts \\ []) do
+  def identify!(search, opts \\ []) do
     Client.affiliation!(Params.query(search), [])
-    |> Map.get("items", [])
-    |> Enum.map(fn d -> Organization.extract(d) end)
+    |> Matches.extract()
+  end
+
+  def chose_organization!(search, opts \\ []) do
+    Client.affiliation!(Params.query(search), [])
+    |> Matches.extract()
+    |> Matches.chosen_organization()
   end
 
 end
