@@ -5,6 +5,16 @@ defmodule ROR.Filter do
   alias ROR.Status
   alias ROR.Type
 
+  @type t :: %__MODULE__{
+               status: binary() | atom(),
+               types: binary() | atom(),
+               country_code: binary() | atom(),
+               country_name: binary() | atom(),
+               continent_code: binary() | atom(),
+               continent_name: binary() | atom()
+             }
+
+
   defstruct [
     status: nil,
     types: nil,
@@ -14,6 +24,7 @@ defmodule ROR.Filter do
     continent_name: nil
   ]
 
+  @spec new(input :: Filter.t() | keyword()) :: Filter.t()
   def new(%Filter{} = filter) do
     filter
   end
@@ -30,6 +41,7 @@ defmodule ROR.Filter do
     |> validate!()
   end
 
+  @spec to_ror_param(filter :: Filter.t() | keyword()) :: nil | binary()
   def to_ror_param(
         %{
           status: nil,
@@ -38,12 +50,12 @@ defmodule ROR.Filter do
           country_name: nil,
           continent_code: nil,
           continent_name: nil
-        }
+        } = filter
       ) do
     nil
   end
 
-  def to_ror_param(filter) do
+  def to_ror_param(%Filter{} = filter) do
     filter
     |> Map.from_struct()
     |> Enum.map(fn {k, v} -> filterize(k, v) end)
@@ -51,6 +63,7 @@ defmodule ROR.Filter do
     |> Enum.join(",")
   end
 
+  @spec validate!(filter :: Filter.t() | keyword()) :: Filter.t()
   defp validate!(filter) do
     if !is_nil(filter.status) && !String.to_atom("#{filter.status}") in Status.vocab(),
        do: raise "Invalid Filter status '#{filter.status}'"
@@ -59,6 +72,7 @@ defmodule ROR.Filter do
     filter
   end
 
+  @spec filterize(key :: atom() | binary(), value :: atom() | binary()) :: binary()
   defp filterize(_, nil) do
     nil
   end

@@ -2,24 +2,29 @@ defmodule ROR.ID do
 
   @id_regex ~r/^0[a-hj-km-np-tv-z|0-9]{6}[0-9]{2}$/
 
+  @spec extract(data :: map()) :: binary()
   def extract(data) do
     data["id"]
   end
 
+  @spec normalize(id :: binary()) :: binary()
   def normalize(id) do
     "https://ror.org/" <> minimize(id)
   end
 
+  @spec minimize(id :: binary()) :: binary()
   def minimize(id) do
     id
     |> String.trim()
     |> strip()
   end
 
+  @spec path(id :: binary()) :: binary()
   def path(id) do
     "/#{minimize(id)}"
   end
 
+  @spec valid?(id :: binary()) :: boolean()
   def valid?(id) do
     try do
       mid = minimize(id)
@@ -29,10 +34,12 @@ defmodule ROR.ID do
     end
   end
 
+  @spec vocab() :: list(atom())
   def vocab do
     []
   end
 
+  @spec strip(id :: binary()) :: binary()
   defp strip("https://ror.org/" <> id) do
     strip(id)
   end
@@ -49,6 +56,7 @@ defmodule ROR.ID do
     raise "ROR ID is unexpected: '#{id}'"
   end
 
+  @spec checksum_ok?(id :: binary()) :: boolean()
   defp checksum_ok?(_id) do
     #https://github.com/ror-community/ror-api/blob/bd040a0d2558a478c06a89118a29eeb9b6142710/rorapi/management/commands/generaterorid.py#L8
     true

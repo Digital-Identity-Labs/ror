@@ -13,6 +13,21 @@ defmodule ROR.Organization do
   alias ROR.Type
   alias ROR.Status
 
+  @type t :: %__MODULE__{
+               id: binary(),
+               admin: Admin.t(),
+               domains: list(binary()),
+               established: binary(),
+               external_ids: list(ExternalID.t()),
+               links: list(Link.t()),
+               locations: list(Location.t()),
+               names: list(Name.t()),
+               relationships: list(Relationship.t()),
+               status: atom(),
+               types: list(atom())
+             }
+
+
   defstruct [
     id: nil,
     admin: %Admin{},
@@ -26,6 +41,13 @@ defmodule ROR.Organization do
     status: nil,
     types: []
   ]
+
+  @spec extract(data :: map()) :: Organization.t() | list(Organization.t())
+  def extract(%{"items" => items}) do
+    for o <- items do
+      extract(o)
+    end
+  end
 
   def extract(data) do
     %Organization{
@@ -43,14 +65,17 @@ defmodule ROR.Organization do
     }
   end
 
+  @spec id(org :: Organization.t()) :: binary()
   def id(%Organization{id: id} = org) do
     ID.minimize(id)
   end
 
+  @spec full_id(org :: Organization.t()) :: binary()
   def full_id(%Organization{id: id} = org) do
     id
   end
 
+  @spec vocab() :: list(atom())
   def vocab do
     []
   end

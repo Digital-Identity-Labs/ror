@@ -3,6 +3,7 @@ defmodule ROR.Params do
   alias ROR.Utils
   alias ROR.Filter
 
+  @spec generate(opts :: keyword()) :: keyword()
   def generate(opts) do
 
     filter = Filter.new(opts[:filter])
@@ -18,14 +19,17 @@ defmodule ROR.Params do
 
   end
 
+  @spec query(value :: binary()) :: binary()
   def query(value) do
     Utils.escape_elastic(value)
   end
 
+  @spec advanced_query(value :: binary()) :: binary()
   def advanced_query(value) do
     Utils.escape_elastic(value)
   end
 
+  @spec page(page :: map() | nil | integer() | binary()) :: binary()
   def page(nil) do
     1
   end

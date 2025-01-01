@@ -26,6 +26,7 @@ defmodule ROR.Client do
 
   alias ROR.ID
 
+  @spec http(opts :: keyword()) :: map()
   def http(opts \\ []) do
     Keyword.merge(@default_http_options, (opts || []))
     |> Keyword.merge([user_agent: http_agent_name()])
@@ -33,6 +34,7 @@ defmodule ROR.Client do
     |> CurlReq.Plugin.attach()
   end
 
+  @spec get!(id :: binary(), opts :: keyword()) :: map()
   def get!(id, opts \\ []) do
     opts = Keyword.merge(@default_get_options, (opts || []))
            |> Keyword.take(@allowed_get_options)
@@ -40,6 +42,7 @@ defmodule ROR.Client do
     Req.get!(http(opts[:http]), url: ID.path(id)).body
   end
 
+  @spec list!(opts :: keyword()) ::  map()
   def list!(opts \\ []) do
     opts = Keyword.merge(@default_list_options, (opts || []))
            |> Keyword.take(@allowed_list_options)
@@ -47,6 +50,7 @@ defmodule ROR.Client do
     Req.get!(http(opts[:http]), params: opts[:params]).body
   end
 
+  @spec query!(value :: binary(), opts :: keyword()) ::  map()
   def query!(value, opts \\ []) do
     opts = Keyword.merge(@default_query_options, (opts || []))
            |> Keyword.take(@allowed_query_options)
@@ -56,6 +60,7 @@ defmodule ROR.Client do
     Req.get!(http(opts[:http]), params: params).body
   end
 
+  @spec query_advanced!(value :: binary(), opts :: keyword()) ::  map()
   def query_advanced!(value, opts \\ []) do
     opts = Keyword.merge(@default_query_options, (opts || []))
            |> Keyword.take(@allowed_query_options)
@@ -65,6 +70,7 @@ defmodule ROR.Client do
     Req.get!(http(opts[:http]), params: params).body
   end
 
+  @spec affiliation!(value :: binary(), opts :: keyword()) :: map()
   def affiliation!(value, opts \\ []) do
     opts = Keyword.merge(@default_affiliation_options, (opts || []))
            |> Keyword.take(@allowed_affiliation_options)

@@ -1,8 +1,8 @@
 defmodule ROR.Domain do
 
-  #@enforce_keys [:id]
   alias __MODULE__
 
+  @spec extract(data :: map()) :: list(binary())
   def extract(%{"domains" => missing}) when is_nil(missing) or missing == [] do
     []
   end
@@ -12,6 +12,7 @@ defmodule ROR.Domain do
     |> Enum.map(fn d -> d end)
   end
 
+  @spec vocab() :: list(atom())
   def vocab do
     []
   end

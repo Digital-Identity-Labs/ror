@@ -3,6 +3,20 @@ defmodule ROR.Location do
   #@enforce_keys [:id]
   alias __MODULE__
 
+  @type t :: %__MODULE__{
+               type: atom(),
+               id: binary(),
+               continent_name: binary(),
+               continent_code: binary(),
+               country_code: binary(),
+               country_name: binary(),
+               country_subdivision_code: binary(),
+               country_subdivision_name: binary(),
+               latitude: binary(),
+               longitude: binary(),
+               name: binary()
+             }
+
   defstruct [
     type: :geonames,
     id: nil,
@@ -17,6 +31,7 @@ defmodule ROR.Location do
     name: nil
   ]
 
+  @spec extract(data :: map()) :: list(Location.t())
   def extract(data) do
     for d <- data["locations"] do
 
@@ -37,6 +52,7 @@ defmodule ROR.Location do
     end
   end
 
+  @spec vocab() :: list(atom())
   def vocab do
     [:geonames]
   end
