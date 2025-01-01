@@ -32,11 +32,12 @@ defmodule ROR.Filter do
   XX
   """
   @spec new(input :: Filter.t() | keyword()) :: Filter.t()
+  def new(filter \\ [])
   def new(%Filter{} = filter) do
     filter
   end
 
-  def new(filter_opts \\ []) do
+  def new(filter_opts) do
     %Filter{
       status: filter_opts[:status],
       types: filter_opts[:types] || filter_opts[:type],
@@ -53,14 +54,14 @@ defmodule ROR.Filter do
   """
   @spec to_ror_param(filter :: Filter.t() | keyword()) :: nil | binary()
   def to_ror_param(
-        %{
+        %Filter{
           status: nil,
           types: nil,
           country_code: nil,
           country_name: nil,
           continent_code: nil,
           continent_name: nil
-        } = filter
+        }
       ) do
     nil
   end
@@ -77,9 +78,9 @@ defmodule ROR.Filter do
 
   @spec validate!(filter :: Filter.t() | keyword()) :: Filter.t()
   defp validate!(filter) do
-    if !is_nil(filter.status) && !String.to_atom("#{filter.status}") in Status.vocab(),
+    if !is_nil(filter.status) && String.to_atom("#{filter.status}") not in Status.vocab(),
        do: raise "Invalid Filter status '#{filter.status}'"
-    if !is_nil(filter.types) && !String.to_atom("#{filter.types}") in Type.vocab(),
+    if !is_nil(filter.types) && String.to_atom("#{filter.types}") not in Type.vocab(),
        do: raise "Invalid Filter type '#{filter.types}'"
     filter
   end

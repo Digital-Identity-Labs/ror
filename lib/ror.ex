@@ -7,7 +7,6 @@ defmodule ROR do
   alias ROR.Client
   alias ROR.Organization
   alias ROR.Params
-  alias ROR.Filter
   alias ROR.Results
   alias ROR.Matches
 

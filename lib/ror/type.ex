@@ -4,8 +4,6 @@ defmodule ROR.Type do
   XX
   """
 
-  alias __MODULE__
-
   @doc """
   XX
   """

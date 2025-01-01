@@ -76,7 +76,7 @@ defmodule ROR.Organization do
   XX
   """
   @spec id(org :: Organization.t()) :: binary()
-  def id(%Organization{id: id} = org) do
+  def id(%Organization{id: id} = _org) do
     ID.minimize(id)
   end
 
@@ -84,7 +84,7 @@ defmodule ROR.Organization do
   XX
   """
   @spec full_id(org :: Organization.t()) :: binary()
-  def full_id(%Organization{id: id} = org) do
+  def full_id(%Organization{id: id} = _org) do
     id
   end
 

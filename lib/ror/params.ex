@@ -17,7 +17,7 @@ defmodule ROR.Params do
 
 
     [filter: filter, page: page, all_status: all_status]
-    |> Enum.reject(fn {k, v} -> is_nil(v) end)
+    |> Enum.reject(fn {_k, v} -> is_nil(v) end)
 
   end
 

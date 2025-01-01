@@ -4,8 +4,6 @@ defmodule ROR.Status do
   XX
   """
 
-  alias __MODULE__
-
   @doc """
   XX
   """
