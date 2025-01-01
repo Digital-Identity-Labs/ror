@@ -1,5 +1,9 @@
 defmodule ROR.Relationship do
 
+  @moduledoc """
+  XX
+  """
+
   #@enforce_keys [:id]
   alias __MODULE__
 
@@ -15,6 +19,9 @@ defmodule ROR.Relationship do
     type: nil,
   ]
 
+  @doc """
+  XX
+  """
   @spec extract(data :: map()) :: list(Relationship.t())
   def extract(data) do
     for d <- data["relationships"] do
@@ -26,6 +33,9 @@ defmodule ROR.Relationship do
     end
   end
 
+  @doc """
+  XX
+  """
   @spec vocab() :: list(atom())
   def vocab do
     [:related, :parent, :child, :predecessor, :successor]

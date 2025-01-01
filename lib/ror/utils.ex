@@ -1,5 +1,7 @@
 defmodule ROR.Utils do
 
+  @moduledoc false
+
   @elastic_special [
     "+",
     "-",

@@ -1,5 +1,9 @@
 defmodule ROR.Organization do
 
+  @moduledoc """
+  XX
+  """
+
   @enforce_keys [:id]
   alias __MODULE__
   alias ROR.Admin
@@ -42,6 +46,9 @@ defmodule ROR.Organization do
     types: []
   ]
 
+  @doc """
+  XX
+  """
   @spec extract(data :: map()) :: Organization.t() | list(Organization.t())
   def extract(%{"items" => items}) do
     for o <- items do
@@ -65,16 +72,25 @@ defmodule ROR.Organization do
     }
   end
 
+  @doc """
+  XX
+  """
   @spec id(org :: Organization.t()) :: binary()
   def id(%Organization{id: id} = org) do
     ID.minimize(id)
   end
 
+  @doc """
+  XX
+  """
   @spec full_id(org :: Organization.t()) :: binary()
   def full_id(%Organization{id: id} = org) do
     id
   end
 
+  @doc """
+  XX
+  """
   @spec vocab() :: list(atom())
   def vocab do
     []

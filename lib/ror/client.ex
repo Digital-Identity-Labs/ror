@@ -1,5 +1,9 @@
 defmodule ROR.Client do
 
+  @moduledoc """
+  XX
+  """
+
   @default_url "https://api.ror.org/v2/organizations"
 
   @default_http_options [
@@ -26,6 +30,9 @@ defmodule ROR.Client do
 
   alias ROR.ID
 
+  @doc """
+  XX
+  """
   @spec http(opts :: keyword()) :: map()
   def http(opts \\ []) do
     Keyword.merge(@default_http_options, (opts || []))
@@ -34,6 +41,9 @@ defmodule ROR.Client do
     |> CurlReq.Plugin.attach()
   end
 
+  @doc """
+  XX
+  """
   @spec get!(id :: binary(), opts :: keyword()) :: map()
   def get!(id, opts \\ []) do
     opts = Keyword.merge(@default_get_options, (opts || []))
@@ -42,6 +52,9 @@ defmodule ROR.Client do
     Req.get!(http(opts[:http]), url: ID.path(id)).body
   end
 
+  @doc """
+  XX
+  """
   @spec list!(opts :: keyword()) ::  map()
   def list!(opts \\ []) do
     opts = Keyword.merge(@default_list_options, (opts || []))
@@ -50,6 +63,9 @@ defmodule ROR.Client do
     Req.get!(http(opts[:http]), params: opts[:params]).body
   end
 
+  @doc """
+  XX
+  """
   @spec query!(value :: binary(), opts :: keyword()) ::  map()
   def query!(value, opts \\ []) do
     opts = Keyword.merge(@default_query_options, (opts || []))
@@ -60,6 +76,9 @@ defmodule ROR.Client do
     Req.get!(http(opts[:http]), params: params).body
   end
 
+  @doc """
+  XX
+  """
   @spec query_advanced!(value :: binary(), opts :: keyword()) ::  map()
   def query_advanced!(value, opts \\ []) do
     opts = Keyword.merge(@default_query_options, (opts || []))
@@ -70,6 +89,9 @@ defmodule ROR.Client do
     Req.get!(http(opts[:http]), params: params).body
   end
 
+  @doc """
+  XX
+  """
   @spec affiliation!(value :: binary(), opts :: keyword()) :: map()
   def affiliation!(value, opts \\ []) do
     opts = Keyword.merge(@default_affiliation_options, (opts || []))
@@ -80,6 +102,9 @@ defmodule ROR.Client do
     Req.get!(http(opts[:http]), params: params).body
   end
 
+  @doc """
+  XX
+  """
   @spec http_agent_name() :: binary()
   def http_agent_name do
     "Elixir ROR Client" #{Application.spec(:ror, :vsn)}"

@@ -1,5 +1,7 @@
 defimpl Enumerable, for: ROR.Results do
 
+  @moduledoc false
+
   def count(_list), do: {:error, __MODULE__}
   def member?(_list, _value), do: {:error, __MODULE__}
   def slice(_list), do: {:error, __MODULE__}
@@ -13,6 +15,8 @@ defimpl Enumerable, for: ROR.Results do
 end
 
 defimpl Enumerable, for: ROR.Matches do
+
+  @moduledoc false
 
   def count(_list), do: {:error, __MODULE__}
   def member?(_list, _value), do: {:error, __MODULE__}

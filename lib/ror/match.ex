@@ -1,5 +1,9 @@
 defmodule ROR.Match do
 
+  @moduledoc """
+  XX
+  """
+
   @enforce_keys [:organization]
   alias __MODULE__
   alias ROR.Organization
@@ -21,6 +25,9 @@ defmodule ROR.Match do
     matching_type: nil
   ]
 
+  @doc """
+  XX
+  """
   @spec extract(data :: map()) :: list(Match.t())
   def extract(data) do
     for d <- data["items"] do
@@ -34,10 +41,15 @@ defmodule ROR.Match do
     end
   end
 
+  @doc """
+  XX
+  """
   @spec vocab() :: list(atom())
   def vocab do
     [:phrase, :common_terms, :fuzzy, :heuristics, :acronym, :exact]
   end
+
+  ###############################################################################################################
 
   @spec mtype_to_atom(mtype :: binary) :: atom()
   defp mtype_to_atom(mtype) do

@@ -1,6 +1,9 @@
 defmodule ROR.ExternalID do
 
-  #@enforce_keys [:id]
+  @moduledoc """
+  XX
+  """
+
   alias __MODULE__
 
   @type t :: %__MODULE__{
@@ -16,6 +19,9 @@ defmodule ROR.ExternalID do
     all: []
   ]
 
+  @doc """
+  XX
+  """
   @spec extract(data :: map()) :: list(ExternalID.t())
   def extract(data) do
     for d <- data["external_ids"] do
@@ -27,6 +33,9 @@ defmodule ROR.ExternalID do
     end
   end
 
+  @doc """
+  XX
+  """
   @spec vocab() :: list(atom())
   def vocab do
     [:fundref, :grid, :isni, :wikidata]

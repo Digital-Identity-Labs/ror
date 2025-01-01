@@ -1,5 +1,9 @@
 defmodule ROR.Results do
 
+  @moduledoc """
+  XX
+  """
+
   alias __MODULE__
   alias ROR.Organization
   alias ROR.Results
@@ -16,6 +20,9 @@ defmodule ROR.Results do
     time: 0
   ]
 
+  @doc """
+  XX
+  """
   @spec extract(data :: map()) :: Results.t()
   def extract(data) do
     %Results{
@@ -25,21 +32,33 @@ defmodule ROR.Results do
     }
   end
 
+  @doc """
+  XX
+  """
   @spec organizations(results :: Results.t()) :: list(Organization.t())
   def organizations(%Results{} = results) do
     results.items
   end
 
+  @doc """
+  XX
+  """
   @spec orgs(results :: Results.t()) :: list(Organization.t())
   def orgs(%Results{} = results) do
     results.items
   end
 
+  @doc """
+  XX
+  """
   @spec time_taken(results :: Results.t()) :: integer()
   def time_taken(%Results{} = results) do
     results.time
   end
 
+  @doc """
+  XX
+  """
   @spec number_of_results(results :: Results.t()) :: integer()
   def number_of_results(%Results{} = results) do
     results.results

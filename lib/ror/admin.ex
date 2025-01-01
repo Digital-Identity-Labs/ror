@@ -1,5 +1,9 @@
 defmodule ROR.Admin do
 
+  @moduledoc """
+  XX
+  """
+
   alias __MODULE__
 
   @type t :: %__MODULE__{
@@ -16,6 +20,9 @@ defmodule ROR.Admin do
     updated_schema: nil,
   ]
 
+  @doc """
+  XX
+  """
   @spec extract(data :: map()) :: Admin.t()
   def extract(data) do
     %Admin{

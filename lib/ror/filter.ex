@@ -1,5 +1,9 @@
 defmodule ROR.Filter do
 
+  @moduledoc """
+  XX
+  """
+
   #@enforce_keys [:id]
   alias __MODULE__
   alias ROR.Status
@@ -24,6 +28,9 @@ defmodule ROR.Filter do
     continent_name: nil
   ]
 
+  @doc """
+  XX
+  """
   @spec new(input :: Filter.t() | keyword()) :: Filter.t()
   def new(%Filter{} = filter) do
     filter
@@ -41,6 +48,9 @@ defmodule ROR.Filter do
     |> validate!()
   end
 
+  @doc """
+  XX
+  """
   @spec to_ror_param(filter :: Filter.t() | keyword()) :: nil | binary()
   def to_ror_param(
         %{
@@ -62,6 +72,8 @@ defmodule ROR.Filter do
     |> Enum.reject(&is_nil/1)
     |> Enum.join(",")
   end
+
+  ###############################################################################################################
 
   @spec validate!(filter :: Filter.t() | keyword()) :: Filter.t()
   defp validate!(filter) do

@@ -1,17 +1,30 @@
 defmodule ROR.ID do
 
+  @moduledoc """
+  XX
+  """
+
   @id_regex ~r/^0[a-hj-km-np-tv-z|0-9]{6}[0-9]{2}$/
 
+  @doc """
+  XX
+  """
   @spec extract(data :: map()) :: binary()
   def extract(data) do
     data["id"]
   end
 
+  @doc """
+  XX
+  """
   @spec normalize(id :: binary()) :: binary()
   def normalize(id) do
     "https://ror.org/" <> minimize(id)
   end
 
+  @doc """
+  XX
+  """
   @spec minimize(id :: binary()) :: binary()
   def minimize(id) do
     id
@@ -19,11 +32,17 @@ defmodule ROR.ID do
     |> strip()
   end
 
+  @doc """
+  XX
+  """
   @spec path(id :: binary()) :: binary()
   def path(id) do
     "/#{minimize(id)}"
   end
 
+  @doc """
+  XX
+  """
   @spec valid?(id :: binary()) :: boolean()
   def valid?(id) do
     try do
@@ -34,10 +53,15 @@ defmodule ROR.ID do
     end
   end
 
+  @doc """
+  XX
+  """
   @spec vocab() :: list(atom())
   def vocab do
     []
   end
+
+  ###############################################################################################################
 
   @spec strip(id :: binary()) :: binary()
   defp strip("https://ror.org/" <> id) do

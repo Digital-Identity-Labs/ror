@@ -1,5 +1,7 @@
 defmodule ROR.Params do
 
+  @moduledoc false
+
   alias ROR.Utils
   alias ROR.Filter
 

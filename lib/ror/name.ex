@@ -1,5 +1,9 @@
 defmodule ROR.Name do
 
+  @moduledoc """
+  XX
+  """
+
   #@enforce_keys [:id]
   alias __MODULE__
 
@@ -16,6 +20,9 @@ defmodule ROR.Name do
     value: nil,
   ]
 
+  @doc """
+  XX
+  """
   @spec extract(data :: map()) :: list(Name.t())
   def extract(data) do
     for d <- data["names"] do
@@ -27,6 +34,9 @@ defmodule ROR.Name do
     end
   end
 
+  @doc """
+  XX
+  """
   @spec vocab() :: list(atom())
   def vocab do
     [:acronym, :alias, :label, :ror_display]

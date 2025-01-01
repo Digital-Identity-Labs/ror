@@ -1,5 +1,9 @@
 defmodule ROR.Link do
 
+  @moduledoc """
+  XX
+  """
+
   #@enforce_keys [:id]
   alias __MODULE__
 
@@ -13,6 +17,9 @@ defmodule ROR.Link do
     value: nil,
   ]
 
+  @doc """
+  XX
+  """
   @spec extract(data :: map()) :: list(Link.t())
   def extract(data) do
     for d <- data["links"] do
@@ -23,6 +30,9 @@ defmodule ROR.Link do
     end
   end
 
+  @doc """
+  XX
+  """
   @spec vocab() :: list(atom())
   def vocab do
     []

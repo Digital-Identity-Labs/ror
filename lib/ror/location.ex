@@ -1,5 +1,9 @@
 defmodule ROR.Location do
 
+  @moduledoc """
+  XX
+  """
+
   #@enforce_keys [:id]
   alias __MODULE__
 
@@ -31,6 +35,9 @@ defmodule ROR.Location do
     name: nil
   ]
 
+  @doc """
+  XX
+  """
   @spec extract(data :: map()) :: list(Location.t())
   def extract(data) do
     for d <- data["locations"] do
@@ -52,6 +59,9 @@ defmodule ROR.Location do
     end
   end
 
+  @doc """
+  XX
+  """
   @spec vocab() :: list(atom())
   def vocab do
     [:geonames]
