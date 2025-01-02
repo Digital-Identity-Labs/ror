@@ -14,4 +14,12 @@ defmodule RorNameTest do
 
   end
 
+  describe "vocab/0" do
+
+    test "returns an array contains key vocabulary/values, as atoms" do
+      assert [:acronym, :alias, :label, :ror_display] = ThisModule.vocab()
+    end
+
+  end
+
 end

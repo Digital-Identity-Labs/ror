@@ -14,4 +14,12 @@ defmodule RorLocationTest do
 
   end
 
+  describe "vocab/0" do
+
+    test "returns an array contains key vocabulary/values, as atoms" do
+      assert [:geonames] = ThisModule.vocab()
+    end
+
+  end
+
 end

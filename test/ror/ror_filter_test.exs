@@ -6,6 +6,12 @@ defmodule RorFilterTest do
 
   alias ROR.Filter, as: ThisModule
 
+  describe "new/1" do
 
+  end
+
+  describe "to_ror_param/1" do
+
+  end
 
 end

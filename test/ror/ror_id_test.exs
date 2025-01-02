@@ -8,7 +8,25 @@ defmodule RorIDTest do
 
   describe "extract/1" do
 
+  end
 
+  describe "normalize/1" do
+
+  end
+
+  describe "minimize/1" do
+
+  end
+
+  describe "path/1" do
+
+  end
+
+  describe "valid?/1" do
+
+  end
+
+  describe "vocab/0" do
 
   end
 

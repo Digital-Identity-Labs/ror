@@ -6,8 +6,8 @@ defmodule RorUtilsTest do
 
   alias ROR.Utils, as: ThisModule
 
+  describe "escape_elastic/1" do
 
-
-
+  end
 
 end

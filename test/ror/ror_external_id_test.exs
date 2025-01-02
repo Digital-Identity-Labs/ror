@@ -14,4 +14,12 @@ defmodule RorExternalIDTest do
 
   end
 
+  describe "vocab/0" do
+
+    test "returns an array contains key vocabulary/values, as atoms" do
+      assert [:fundref, :grid, :isni, :wikidata] = ThisModule.vocab()
+    end
+
+  end
+
 end

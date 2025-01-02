@@ -14,4 +14,16 @@ defmodule RorOrganizationTest do
 
   end
 
+  describe "id/1" do
+
+  end
+
+  describe "full_id/1" do
+
+  end
+
+  describe "vocab/1" do
+
+  end
+
 end

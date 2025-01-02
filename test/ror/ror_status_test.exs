@@ -14,4 +14,12 @@ defmodule RorStatusTest do
 
   end
 
+  describe "vocab/0" do
+
+    test "returns an array contains key vocabulary/values, as atoms" do
+      assert [:active, :inactive, :withdrawn] = ThisModule.vocab()
+    end
+
+  end
+
 end

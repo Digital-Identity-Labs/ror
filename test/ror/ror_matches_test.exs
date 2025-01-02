@@ -14,4 +14,24 @@ defmodule RorMatchesTest do
 
   end
 
+  describe "matches/1" do
+
+  end
+
+  describe "number_of_matches/1" do
+
+  end
+
+  describe "chosen/1" do
+
+  end
+
+  describe "chosen_organization/1" do
+
+  end
+
+  describe "Enumeration protocol" do
+
+  end
+
 end

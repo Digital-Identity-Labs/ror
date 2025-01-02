@@ -14,4 +14,25 @@ defmodule RorResultsTest do
 
   end
 
+  describe "organizations/1" do
+
+  end
+
+  describe "orgs/1" do
+
+  end
+
+  describe "time_taken/1" do
+
+  end
+
+  describe "number_of_results/1" do
+
+  end
+
+  describe "Enumeration protocol" do
+
+  end
+
+
 end

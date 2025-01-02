@@ -14,4 +14,12 @@ defmodule RorTypeTest do
 
   end
 
+  describe "vocab/0" do
+
+    test "returns an array contains key vocabulary/values, as atoms" do
+      assert [:education, :funder, :healthcare, :company, :archive, :nonprofit, :government, :facility, :other] = ThisModule.vocab()
+    end
+
+  end
+
 end

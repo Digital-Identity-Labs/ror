@@ -6,6 +6,20 @@ defmodule RorParamsTest do
 
   alias ROR.Params, as: ThisModule
 
+  describe "generate/1" do
 
+  end
+
+  describe "query/1" do
+
+  end
+
+  describe "advanced_query/1" do
+
+  end
+
+  describe "page/1" do
+
+  end
 
 end
