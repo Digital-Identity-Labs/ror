@@ -1,12 +1,18 @@
 defmodule RorUtilsTest do
   use ExUnit.Case
 
-  @example_org_json File.read! "test/support/static/example_org.json"
-  @example_org_data Jason.decode!(@example_org_json)
-
   alias ROR.Utils, as: ThisModule
+  alias ROR.Utils
 
   describe "escape_elastic/1" do
+
+    test "returns an escaped Elastic Search style query string" do
+      assert "This \\&& That" = Utils.escape_elastic("This && That")
+    end
+
+    test "URI encoding is not done at this stage, Req handles that" do
+      assert "Bath College" = Utils.escape_elastic("Bath College")
+    end
 
   end
 
