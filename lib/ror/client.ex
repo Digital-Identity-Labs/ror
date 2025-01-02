@@ -33,17 +33,6 @@ defmodule ROR.Client do
   @doc """
   XX
   """
-  @spec http(opts :: keyword()) :: map()
-  def http(opts \\ []) do
-    Keyword.merge(@default_http_options, (opts || []))
-    |> Keyword.merge([user_agent: http_agent_name()])
-    |> Req.new()
-    |> CurlReq.Plugin.attach()
-  end
-
-  @doc """
-  XX
-  """
   @spec get!(id :: binary(), opts :: keyword()) :: map()
   def get!(id, opts \\ []) do
     opts = Keyword.merge(@default_get_options, (opts || []))
@@ -102,12 +91,21 @@ defmodule ROR.Client do
     Req.get!(http(opts[:http]), params: params).body
   end
 
-  @doc """
-  XX
-  """
+  @doc false
+  @spec http(opts :: keyword()) :: map()
+  def http(opts \\ []) do
+    Keyword.merge(@default_http_options, (opts || []))
+    |> Keyword.merge([user_agent: http_agent_name()])
+    |> Req.new()
+    |> CurlReq.Plugin.attach()
+  end
+
+  @doc false
   @spec http_agent_name() :: binary()
   def http_agent_name do
-    "Elixir ROR Client" #{Application.spec(:ror, :vsn)}"
+    "Elixir ROR Client #{Application.spec(:ror, :vsn)}"
   end
+
+  ######################################################################################
 
 end
