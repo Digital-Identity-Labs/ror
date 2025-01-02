@@ -88,6 +88,9 @@ defmodule ROR.Client do
 
     params = Keyword.merge(opts[:params], [affiliation: value])
 
+    if params[:filter], do: raise "Cannot pass a filter to this API function"
+    if params[:page], do: raise "Cannot pass a page to this API function"
+
     Req.get!(http(opts[:http]), params: params).body
   end
 
