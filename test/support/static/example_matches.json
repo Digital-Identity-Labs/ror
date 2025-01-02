@@ -1,0 +1,1503 @@
+{
+  "items": [
+    {
+      "chosen": true,
+      "matching_type": "PHRASE",
+      "organization": {
+        "admin": {
+          "created": {
+            "date": "2018-11-14",
+            "schema_version": "1.0"
+          },
+          "last_modified": {
+            "date": "2024-12-11",
+            "schema_version": "2.1"
+          }
+        },
+        "domains": [
+          "le.ac.uk"
+        ],
+        "established": 1957,
+        "external_ids": [
+          {
+            "all": [
+              "501100000738"
+            ],
+            "preferred": null,
+            "type": "fundref"
+          },
+          {
+            "all": [
+              "grid.9918.9"
+            ],
+            "preferred": "grid.9918.9",
+            "type": "grid"
+          },
+          {
+            "all": [
+              "0000 0004 1936 8411"
+            ],
+            "preferred": null,
+            "type": "isni"
+          },
+          {
+            "all": [
+              "Q1333399"
+            ],
+            "preferred": null,
+            "type": "wikidata"
+          }
+        ],
+        "id": "https://ror.org/04h699437",
+        "links": [
+          {
+            "type": "website",
+            "value": "https://le.ac.uk"
+          },
+          {
+            "type": "wikipedia",
+            "value": "http://en.wikipedia.org/wiki/University_of_Leicester"
+          }
+        ],
+        "locations": [
+          {
+            "geonames_details": {
+              "continent_code": "EU",
+              "continent_name": "Europe",
+              "country_code": "GB",
+              "country_name": "United Kingdom",
+              "country_subdivision_code": "ENG",
+              "country_subdivision_name": "England",
+              "lat": 52.6386,
+              "lng": -1.13169,
+              "name": "Leicester"
+            },
+            "geonames_id": 2644668
+          }
+        ],
+        "names": [
+          {
+            "lang": "en",
+            "types": [
+              "ror_display",
+              "label"
+            ],
+            "value": "University of Leicester"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "https://ror.org/05xqxa525",
+            "label": "NIHR Leicester Biomedical Research Centre",
+            "type": "child"
+          },
+          {
+            "id": "https://ror.org/0323snh42",
+            "label": "Institute for Environmental Futures",
+            "type": "child"
+          },
+          {
+            "id": "https://ror.org/048a96r61",
+            "label": "Glenfield Hospital",
+            "type": "related"
+          },
+          {
+            "id": "https://ror.org/02zg49d29",
+            "label": "Leicester General Hospital",
+            "type": "related"
+          },
+          {
+            "id": "https://ror.org/03jkz2y73",
+            "label": "Leicester Royal Infirmary",
+            "type": "related"
+          },
+          {
+            "id": "https://ror.org/03ke6rf22",
+            "label": "NIHR Leicester Cardiovascular Biomedical Research Unit",
+            "type": "related"
+          },
+          {
+            "id": "https://ror.org/04s4s0979",
+            "label": "NIHR Leicester Respiratory Biomedical Research Unit",
+            "type": "related"
+          }
+        ],
+        "status": "active",
+        "types": [
+          "education",
+          "funder"
+        ]
+      },
+      "score": 1.0,
+      "substring": "The University of Leicester"
+    },
+    {
+      "chosen": false,
+      "matching_type": "FUZZY",
+      "organization": {
+        "admin": {
+          "created": {
+            "date": "2018-11-14",
+            "schema_version": "1.0"
+          },
+          "last_modified": {
+            "date": "2024-12-11",
+            "schema_version": "2.1"
+          }
+        },
+        "domains": [
+          "unilu.ch"
+        ],
+        "established": 2000,
+        "external_ids": [
+          {
+            "all": [
+              "grid.449852.6"
+            ],
+            "preferred": "grid.449852.6",
+            "type": "grid"
+          },
+          {
+            "all": [
+              "0000 0001 1456 7938"
+            ],
+            "preferred": null,
+            "type": "isni"
+          },
+          {
+            "all": [
+              "Q673308"
+            ],
+            "preferred": null,
+            "type": "wikidata"
+          }
+        ],
+        "id": "https://ror.org/00kgrkn83",
+        "links": [
+          {
+            "type": "website",
+            "value": "https://www.unilu.ch"
+          },
+          {
+            "type": "wikipedia",
+            "value": "https://en.wikipedia.org/wiki/University_of_Lucerne"
+          }
+        ],
+        "locations": [
+          {
+            "geonames_details": {
+              "continent_code": "EU",
+              "continent_name": "Europe",
+              "country_code": "CH",
+              "country_name": "Switzerland",
+              "country_subdivision_code": "LU",
+              "country_subdivision_name": "Lucerne",
+              "lat": 47.05048,
+              "lng": 8.30635,
+              "name": "Lucerne"
+            },
+            "geonames_id": 2659811
+          }
+        ],
+        "names": [
+          {
+            "lang": null,
+            "types": [
+              "acronym"
+            ],
+            "value": "UNILU"
+          },
+          {
+            "lang": "en",
+            "types": [
+              "ror_display",
+              "label"
+            ],
+            "value": "University of Lucerne"
+          },
+          {
+            "lang": "it",
+            "types": [
+              "label"
+            ],
+            "value": "Università di Lucerna"
+          },
+          {
+            "lang": "de",
+            "types": [
+              "label"
+            ],
+            "value": "Universität Luzern"
+          },
+          {
+            "lang": "fr",
+            "types": [
+              "label"
+            ],
+            "value": "Université de Lucerne"
+          }
+        ],
+        "relationships": [],
+        "status": "active",
+        "types": [
+          "education"
+        ]
+      },
+      "score": 0.82,
+      "substring": "The University of Leicester"
+    },
+    {
+      "chosen": false,
+      "matching_type": "FUZZY",
+      "organization": {
+        "admin": {
+          "created": {
+            "date": "2018-11-14",
+            "schema_version": "1.0"
+          },
+          "last_modified": {
+            "date": "2024-12-11",
+            "schema_version": "2.1"
+          }
+        },
+        "domains": [
+          "unibe.ch"
+        ],
+        "established": 1834,
+        "external_ids": [
+          {
+            "all": [
+              "100009068",
+              "501100007282",
+              "100009070",
+              "100009069"
+            ],
+            "preferred": "100009068",
+            "type": "fundref"
+          },
+          {
+            "all": [
+              "grid.5734.5"
+            ],
+            "preferred": "grid.5734.5",
+            "type": "grid"
+          },
+          {
+            "all": [
+              "0000 0001 0726 5157"
+            ],
+            "preferred": null,
+            "type": "isni"
+          },
+          {
+            "all": [
+              "Q659080"
+            ],
+            "preferred": null,
+            "type": "wikidata"
+          }
+        ],
+        "id": "https://ror.org/02k7v4d05",
+        "links": [
+          {
+            "type": "website",
+            "value": "https://www.unibe.ch"
+          },
+          {
+            "type": "wikipedia",
+            "value": "http://en.wikipedia.org/wiki/University_of_Bern"
+          }
+        ],
+        "locations": [
+          {
+            "geonames_details": {
+              "continent_code": "EU",
+              "continent_name": "Europe",
+              "country_code": "CH",
+              "country_name": "Switzerland",
+              "country_subdivision_code": "BE",
+              "country_subdivision_name": "Bern",
+              "lat": 46.94809,
+              "lng": 7.44744,
+              "name": "Bern"
+            },
+            "geonames_id": 2661552
+          }
+        ],
+        "names": [
+          {
+            "lang": null,
+            "types": [
+              "acronym"
+            ],
+            "value": "UB"
+          },
+          {
+            "lang": "en",
+            "types": [
+              "ror_display",
+              "label"
+            ],
+            "value": "University of Bern"
+          },
+          {
+            "lang": "it",
+            "types": [
+              "label"
+            ],
+            "value": "Università di Berna"
+          },
+          {
+            "lang": "de",
+            "types": [
+              "label"
+            ],
+            "value": "Universität Bern"
+          },
+          {
+            "lang": "fr",
+            "types": [
+              "label"
+            ],
+            "value": "Université de Berne"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "https://ror.org/03dz0k314",
+            "label": "Wyss Academy for Nature",
+            "type": "child"
+          },
+          {
+            "id": "https://ror.org/01q9sj412",
+            "label": "University Hospital of Bern",
+            "type": "related"
+          },
+          {
+            "id": "https://ror.org/003bz8x96",
+            "label": "Wiederkäuerklinik",
+            "type": "related"
+          }
+        ],
+        "status": "active",
+        "types": [
+          "education",
+          "funder"
+        ]
+      },
+      "score": 0.78,
+      "substring": "The University of Leicester"
+    },
+    {
+      "chosen": false,
+      "matching_type": "FUZZY",
+      "organization": {
+        "admin": {
+          "created": {
+            "date": "2018-11-14",
+            "schema_version": "1.0"
+          },
+          "last_modified": {
+            "date": "2024-12-11",
+            "schema_version": "2.1"
+          }
+        },
+        "domains": [
+          "unibas.ch"
+        ],
+        "established": 1460,
+        "external_ids": [
+          {
+            "all": [
+              "100008375",
+              "501100008595",
+              "100018710"
+            ],
+            "preferred": "100008375",
+            "type": "fundref"
+          },
+          {
+            "all": [
+              "grid.6612.3"
+            ],
+            "preferred": "grid.6612.3",
+            "type": "grid"
+          },
+          {
+            "all": [
+              "0000 0004 1937 0642"
+            ],
+            "preferred": null,
+            "type": "isni"
+          },
+          {
+            "all": [
+              "Q372608"
+            ],
+            "preferred": null,
+            "type": "wikidata"
+          }
+        ],
+        "id": "https://ror.org/02s6k3f65",
+        "links": [
+          {
+            "type": "website",
+            "value": "https://www.unibas.ch"
+          },
+          {
+            "type": "wikipedia",
+            "value": "http://en.wikipedia.org/wiki/University_of_Basel"
+          }
+        ],
+        "locations": [
+          {
+            "geonames_details": {
+              "continent_code": "EU",
+              "continent_name": "Europe",
+              "country_code": "CH",
+              "country_name": "Switzerland",
+              "country_subdivision_code": "BS",
+              "country_subdivision_name": "Basel-City",
+              "lat": 47.55839,
+              "lng": 7.57327,
+              "name": "Basel"
+            },
+            "geonames_id": 2661604
+          }
+        ],
+        "names": [
+          {
+            "lang": "en",
+            "types": [
+              "ror_display",
+              "label"
+            ],
+            "value": "University of Basel"
+          },
+          {
+            "lang": "it",
+            "types": [
+              "label"
+            ],
+            "value": "Università di Basilea"
+          },
+          {
+            "lang": "de",
+            "types": [
+              "label"
+            ],
+            "value": "Universität Basel"
+          },
+          {
+            "lang": "fr",
+            "types": [
+              "label"
+            ],
+            "value": "Université de Bâle"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "https://ror.org/02mrd0686",
+            "label": "Swiss Nanoscience Institute",
+            "type": "child"
+          },
+          {
+            "id": "https://ror.org/01bmjkv45",
+            "label": "Friedrich Miescher Institute",
+            "type": "related"
+          },
+          {
+            "id": "https://ror.org/03adhka07",
+            "label": "Swiss Tropical and Public Health Institute",
+            "type": "related"
+          },
+          {
+            "id": "https://ror.org/02nhqek82",
+            "label": "University Children’s Hospital Basel",
+            "type": "related"
+          },
+          {
+            "id": "https://ror.org/04k51q396",
+            "label": "University Hospital of Basel",
+            "type": "related"
+          },
+          {
+            "id": "https://ror.org/05fw3jg78",
+            "label": "Universitäre Psychiatrische Kliniken Basel",
+            "type": "related"
+          },
+          {
+            "id": "https://ror.org/047f01g80",
+            "label": "Swiss National Data and Service Center for the Humanities",
+            "type": "related"
+          },
+          {
+            "id": "https://ror.org/03wma5x57",
+            "label": "Swiss Centre for Applied Human Toxicology",
+            "type": "related"
+          }
+        ],
+        "status": "active",
+        "types": [
+          "education",
+          "funder"
+        ]
+      },
+      "score": 0.76,
+      "substring": "The University of Leicester"
+    },
+    {
+      "chosen": false,
+      "matching_type": "FUZZY",
+      "organization": {
+        "admin": {
+          "created": {
+            "date": "2018-11-14",
+            "schema_version": "1.0"
+          },
+          "last_modified": {
+            "date": "2024-12-11",
+            "schema_version": "2.1"
+          }
+        },
+        "domains": [
+          "unifr.ch"
+        ],
+        "established": 1889,
+        "external_ids": [
+          {
+            "all": [
+              "501100005869"
+            ],
+            "preferred": null,
+            "type": "fundref"
+          },
+          {
+            "all": [
+              "grid.8534.a"
+            ],
+            "preferred": "grid.8534.a",
+            "type": "grid"
+          },
+          {
+            "all": [
+              "0000 0004 0478 1713"
+            ],
+            "preferred": null,
+            "type": "isni"
+          },
+          {
+            "all": [
+              "Q36188"
+            ],
+            "preferred": null,
+            "type": "wikidata"
+          }
+        ],
+        "id": "https://ror.org/022fs9h90",
+        "links": [
+          {
+            "type": "website",
+            "value": "https://www.unifr.ch"
+          },
+          {
+            "type": "wikipedia",
+            "value": "http://en.wikipedia.org/wiki/University_of_Fribourg"
+          }
+        ],
+        "locations": [
+          {
+            "geonames_details": {
+              "continent_code": "EU",
+              "continent_name": "Europe",
+              "country_code": "CH",
+              "country_name": "Switzerland",
+              "country_subdivision_code": "FR",
+              "country_subdivision_name": "Fribourg",
+              "lat": 46.80237,
+              "lng": 7.15128,
+              "name": "Fribourg"
+            },
+            "geonames_id": 2660718
+          }
+        ],
+        "names": [
+          {
+            "lang": "en",
+            "types": [
+              "ror_display",
+              "label"
+            ],
+            "value": "University of Fribourg"
+          },
+          {
+            "lang": "it",
+            "types": [
+              "label"
+            ],
+            "value": "Università di Friburgo"
+          },
+          {
+            "lang": "de",
+            "types": [
+              "label"
+            ],
+            "value": "Universität Freiburg"
+          },
+          {
+            "lang": "fr",
+            "types": [
+              "label"
+            ],
+            "value": "Université de Fribourg"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "https://ror.org/01yx62742",
+            "label": "Adolphe Merkle Institute",
+            "type": "child"
+          },
+          {
+            "id": "https://ror.org/00fz8k419",
+            "label": "HFR Freiburg Kantonsspital",
+            "type": "related"
+          }
+        ],
+        "status": "active",
+        "types": [
+          "education",
+          "funder"
+        ]
+      },
+      "score": 0.71,
+      "substring": "The University of Leicester"
+    },
+    {
+      "chosen": false,
+      "matching_type": "COMMON TERMS",
+      "organization": {
+        "admin": {
+          "created": {
+            "date": "2018-11-14",
+            "schema_version": "1.0"
+          },
+          "last_modified": {
+            "date": "2024-12-11",
+            "schema_version": "2.1"
+          }
+        },
+        "domains": [],
+        "established": 2000,
+        "external_ids": [
+          {
+            "all": [
+              "100012151"
+            ],
+            "preferred": "100012151",
+            "type": "fundref"
+          },
+          {
+            "all": [
+              "grid.269014.8"
+            ],
+            "preferred": "grid.269014.8",
+            "type": "grid"
+          },
+          {
+            "all": [
+              "0000 0001 0435 9078"
+            ],
+            "preferred": null,
+            "type": "isni"
+          },
+          {
+            "all": [
+              "Q7894780"
+            ],
+            "preferred": null,
+            "type": "wikidata"
+          }
+        ],
+        "id": "https://ror.org/02fha3693",
+        "links": [
+          {
+            "type": "website",
+            "value": "http://www.uhl-tr.nhs.uk/"
+          },
+          {
+            "type": "wikipedia",
+            "value": "http://en.wikipedia.org/wiki/University_Hospitals_of_Leicester_NHS_Trust"
+          }
+        ],
+        "locations": [
+          {
+            "geonames_details": {
+              "continent_code": "EU",
+              "continent_name": "Europe",
+              "country_code": "GB",
+              "country_name": "United Kingdom",
+              "country_subdivision_code": "ENG",
+              "country_subdivision_name": "England",
+              "lat": 52.6386,
+              "lng": -1.13169,
+              "name": "Leicester"
+            },
+            "geonames_id": 2644668
+          }
+        ],
+        "names": [
+          {
+            "lang": "en",
+            "types": [
+              "ror_display",
+              "label"
+            ],
+            "value": "University Hospitals of Leicester NHS Trust"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "https://ror.org/01tnf8c58",
+            "label": "Feilding Palmer Hospital",
+            "type": "child"
+          },
+          {
+            "id": "https://ror.org/048a96r61",
+            "label": "Glenfield Hospital",
+            "type": "child"
+          },
+          {
+            "id": "https://ror.org/031mc4w27",
+            "label": "Hinckley and District Hospital",
+            "type": "child"
+          },
+          {
+            "id": "https://ror.org/02zg49d29",
+            "label": "Leicester General Hospital",
+            "type": "child"
+          },
+          {
+            "id": "https://ror.org/03jkz2y73",
+            "label": "Leicester Royal Infirmary",
+            "type": "child"
+          },
+          {
+            "id": "https://ror.org/05xqxa525",
+            "label": "NIHR Leicester Biomedical Research Centre",
+            "type": "child"
+          },
+          {
+            "id": "https://ror.org/03ke6rf22",
+            "label": "NIHR Leicester Cardiovascular Biomedical Research Unit",
+            "type": "child"
+          },
+          {
+            "id": "https://ror.org/04s4s0979",
+            "label": "NIHR Leicester Respiratory Biomedical Research Unit",
+            "type": "child"
+          },
+          {
+            "id": "https://ror.org/01fphh031",
+            "label": "NIHR Leicester-Loughborough Diet, Lifestyle and Physical Activity Biomedical Research Unit",
+            "type": "child"
+          },
+          {
+            "id": "https://ror.org/059c7vm29",
+            "label": "St Lukes Hospital",
+            "type": "child"
+          }
+        ],
+        "status": "active",
+        "types": [
+          "funder",
+          "healthcare"
+        ]
+      },
+      "score": 0.7,
+      "substring": "The University of Leicester"
+    },
+    {
+      "chosen": false,
+      "matching_type": "FUZZY",
+      "organization": {
+        "admin": {
+          "created": {
+            "date": "2018-11-14",
+            "schema_version": "1.0"
+          },
+          "last_modified": {
+            "date": "2024-12-11",
+            "schema_version": "2.1"
+          }
+        },
+        "domains": [
+          "unipi.it"
+        ],
+        "established": 1343,
+        "external_ids": [
+          {
+            "all": [
+              "501100007514"
+            ],
+            "preferred": null,
+            "type": "fundref"
+          },
+          {
+            "all": [
+              "grid.5395.a"
+            ],
+            "preferred": "grid.5395.a",
+            "type": "grid"
+          },
+          {
+            "all": [
+              "0000 0004 1757 3729"
+            ],
+            "preferred": null,
+            "type": "isni"
+          },
+          {
+            "all": [
+              "Q645663"
+            ],
+            "preferred": null,
+            "type": "wikidata"
+          }
+        ],
+        "id": "https://ror.org/03ad39j10",
+        "links": [
+          {
+            "type": "website",
+            "value": "https://www.unipi.it"
+          },
+          {
+            "type": "wikipedia",
+            "value": "http://en.wikipedia.org/wiki/University_of_Pisa"
+          }
+        ],
+        "locations": [
+          {
+            "geonames_details": {
+              "continent_code": "EU",
+              "continent_name": "Europe",
+              "country_code": "IT",
+              "country_name": "Italy",
+              "country_subdivision_code": "52",
+              "country_subdivision_name": "Tuscany",
+              "lat": 43.70853,
+              "lng": 10.4036,
+              "name": "Pisa"
+            },
+            "geonames_id": 3170647
+          }
+        ],
+        "names": [
+          {
+            "lang": null,
+            "types": [
+              "acronym"
+            ],
+            "value": "UniPi"
+          },
+          {
+            "lang": "en",
+            "types": [
+              "ror_display",
+              "label"
+            ],
+            "value": "University of Pisa"
+          },
+          {
+            "lang": "it",
+            "types": [
+              "label"
+            ],
+            "value": "Università di Pisa"
+          },
+          {
+            "lang": "de",
+            "types": [
+              "label"
+            ],
+            "value": "Universität Pisa"
+          },
+          {
+            "lang": "fr",
+            "types": [
+              "label"
+            ],
+            "value": "Université de Pise"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "https://ror.org/00mc91w09",
+            "label": "Ospedale Cisanello",
+            "type": "related"
+          }
+        ],
+        "status": "active",
+        "types": [
+          "education",
+          "funder"
+        ]
+      },
+      "score": 0.68,
+      "substring": "The University of Leicester"
+    },
+    {
+      "chosen": false,
+      "matching_type": "FUZZY",
+      "organization": {
+        "admin": {
+          "created": {
+            "date": "2018-11-14",
+            "schema_version": "1.0"
+          },
+          "last_modified": {
+            "date": "2024-12-11",
+            "schema_version": "2.1"
+          }
+        },
+        "domains": [
+          "unisalento.it"
+        ],
+        "established": 1955,
+        "external_ids": [
+          {
+            "all": [
+              "501100005728",
+              "501100005729",
+              "501100006195"
+            ],
+            "preferred": "501100005728",
+            "type": "fundref"
+          },
+          {
+            "all": [
+              "grid.9906.6"
+            ],
+            "preferred": "grid.9906.6",
+            "type": "grid"
+          },
+          {
+            "all": [
+              "0000 0001 2289 7785"
+            ],
+            "preferred": null,
+            "type": "isni"
+          },
+          {
+            "all": [
+              "Q1230902"
+            ],
+            "preferred": null,
+            "type": "wikidata"
+          }
+        ],
+        "id": "https://ror.org/03fc1k060",
+        "links": [
+          {
+            "type": "website",
+            "value": "https://unisalento.it"
+          },
+          {
+            "type": "wikipedia",
+            "value": "http://en.wikipedia.org/wiki/University_of_Salento"
+          }
+        ],
+        "locations": [
+          {
+            "geonames_details": {
+              "continent_code": "EU",
+              "continent_name": "Europe",
+              "country_code": "IT",
+              "country_name": "Italy",
+              "country_subdivision_code": "75",
+              "country_subdivision_name": "Apulia",
+              "lat": 40.35481,
+              "lng": 18.17244,
+              "name": "Lecce"
+            },
+            "geonames_id": 3174953
+          }
+        ],
+        "names": [
+          {
+            "lang": "en",
+            "types": [
+              "ror_display",
+              "label"
+            ],
+            "value": "University of Salento"
+          },
+          {
+            "lang": "it",
+            "types": [
+              "label"
+            ],
+            "value": "Università degli Studi di Lecce"
+          },
+          {
+            "lang": "it",
+            "types": [
+              "alias"
+            ],
+            "value": "Università del Salento"
+          },
+          {
+            "lang": "de",
+            "types": [
+              "label"
+            ],
+            "value": "Universität Salento"
+          },
+          {
+            "lang": "fr",
+            "types": [
+              "label"
+            ],
+            "value": "Université du salento"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "https://ror.org/00qrf6g60",
+            "label": "Istituto Nazionale di Fisica Nucleare, Sezione di Lecce",
+            "type": "child"
+          }
+        ],
+        "status": "active",
+        "types": [
+          "education",
+          "funder"
+        ]
+      },
+      "score": 0.68,
+      "substring": "The University of Leicester"
+    },
+    {
+      "chosen": false,
+      "matching_type": "FUZZY",
+      "organization": {
+        "admin": {
+          "created": {
+            "date": "2018-11-14",
+            "schema_version": "1.0"
+          },
+          "last_modified": {
+            "date": "2024-12-11",
+            "schema_version": "2.1"
+          }
+        },
+        "domains": [
+          "uzh.ch"
+        ],
+        "established": 1833,
+        "external_ids": [
+          {
+            "all": [
+              "501100006447",
+              "501100008481",
+              "501100006448",
+              "501100003290"
+            ],
+            "preferred": "501100006447",
+            "type": "fundref"
+          },
+          {
+            "all": [
+              "grid.7400.3"
+            ],
+            "preferred": "grid.7400.3",
+            "type": "grid"
+          },
+          {
+            "all": [
+              "0000 0004 1937 0650"
+            ],
+            "preferred": null,
+            "type": "isni"
+          },
+          {
+            "all": [
+              "Q206702"
+            ],
+            "preferred": null,
+            "type": "wikidata"
+          }
+        ],
+        "id": "https://ror.org/02crff812",
+        "links": [
+          {
+            "type": "website",
+            "value": "https://uzh.ch/de.html"
+          },
+          {
+            "type": "wikipedia",
+            "value": "http://en.wikipedia.org/wiki/University_of_Zurich"
+          }
+        ],
+        "locations": [
+          {
+            "geonames_details": {
+              "continent_code": "EU",
+              "continent_name": "Europe",
+              "country_code": "CH",
+              "country_name": "Switzerland",
+              "country_subdivision_code": "ZH",
+              "country_subdivision_name": "Zurich",
+              "lat": 47.36667,
+              "lng": 8.55,
+              "name": "Zurich"
+            },
+            "geonames_id": 2657896
+          }
+        ],
+        "names": [
+          {
+            "lang": null,
+            "types": [
+              "acronym"
+            ],
+            "value": "UZH"
+          },
+          {
+            "lang": "en",
+            "types": [
+              "ror_display",
+              "label"
+            ],
+            "value": "University of Zurich"
+          },
+          {
+            "lang": "it",
+            "types": [
+              "label"
+            ],
+            "value": "Università di Zurigo"
+          },
+          {
+            "lang": "de",
+            "types": [
+              "label"
+            ],
+            "value": "Universität Zürich"
+          },
+          {
+            "lang": "fr",
+            "types": [
+              "label"
+            ],
+            "value": "Université de Zurich"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "https://ror.org/00baskk38",
+            "label": "Institute for Biomedical Engineering",
+            "type": "child"
+          },
+          {
+            "id": "https://ror.org/021p56f43",
+            "label": "Laboratory for Social and Neural Systems Research",
+            "type": "child"
+          },
+          {
+            "id": "https://ror.org/035vb3h42",
+            "label": "University Children's Hospital Zurich",
+            "type": "related"
+          },
+          {
+            "id": "https://ror.org/01462r250",
+            "label": "University Hospital of Zurich",
+            "type": "related"
+          },
+          {
+            "id": "https://ror.org/008cfmj78",
+            "label": "Wyss Institute for Biologically Inspired Engineering",
+            "type": "related"
+          },
+          {
+            "id": "https://ror.org/01jtrvx49",
+            "label": "World Glacier Monitoring Service",
+            "type": "related"
+          },
+          {
+            "id": "https://ror.org/033gess63",
+            "label": "Zentralbibliothek Zürich",
+            "type": "related"
+          }
+        ],
+        "status": "active",
+        "types": [
+          "education",
+          "funder"
+        ]
+      },
+      "score": 0.6,
+      "substring": "The University of Leicester"
+    },
+    {
+      "chosen": false,
+      "matching_type": "PHRASE",
+      "organization": {
+        "admin": {
+          "created": {
+            "date": "2024-04-30",
+            "schema_version": "2.0"
+          },
+          "last_modified": {
+            "date": "2024-12-11",
+            "schema_version": "2.1"
+          }
+        },
+        "domains": [],
+        "established": null,
+        "external_ids": [],
+        "id": "https://ror.org/0323snh42",
+        "links": [
+          {
+            "type": "website",
+            "value": "https://le.ac.uk/research/institutes/environmental-futures"
+          }
+        ],
+        "locations": [
+          {
+            "geonames_details": {
+              "continent_code": "EU",
+              "continent_name": "Europe",
+              "country_code": "GB",
+              "country_name": "United Kingdom",
+              "country_subdivision_code": "ENG",
+              "country_subdivision_name": "England",
+              "lat": 52.6386,
+              "lng": -1.13169,
+              "name": "Leicester"
+            },
+            "geonames_id": 2644668
+          }
+        ],
+        "names": [
+          {
+            "lang": "en",
+            "types": [
+              "label",
+              "ror_display"
+            ],
+            "value": "Institute for Environmental Futures"
+          },
+          {
+            "lang": "en",
+            "types": [
+              "alias"
+            ],
+            "value": "University of Leicester Institute for Environmental Futures"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "https://ror.org/04h699437",
+            "label": "University of Leicester",
+            "type": "parent"
+          }
+        ],
+        "status": "active",
+        "types": [
+          "facility"
+        ]
+      },
+      "score": 0.56,
+      "substring": "The University of Leicester"
+    },
+    {
+      "chosen": false,
+      "matching_type": "HEURISTICS",
+      "organization": {
+        "admin": {
+          "created": {
+            "date": "2018-11-14",
+            "schema_version": "1.0"
+          },
+          "last_modified": {
+            "date": "2024-12-11",
+            "schema_version": "2.1"
+          }
+        },
+        "domains": [],
+        "established": 1771,
+        "external_ids": [
+          {
+            "all": [
+              "grid.419248.2"
+            ],
+            "preferred": "grid.419248.2",
+            "type": "grid"
+          },
+          {
+            "all": [
+              "0000 0004 0400 6485"
+            ],
+            "preferred": null,
+            "type": "isni"
+          },
+          {
+            "all": [
+              "Q6519220"
+            ],
+            "preferred": null,
+            "type": "wikidata"
+          }
+        ],
+        "id": "https://ror.org/03jkz2y73",
+        "links": [
+          {
+            "type": "website",
+            "value": "http://www.leicestershospitals.nhs.uk/aboutus/our-hospitals/leicester-royal-infirmary/"
+          },
+          {
+            "type": "wikipedia",
+            "value": "https://en.wikipedia.org/wiki/Leicester_Royal_Infirmary"
+          }
+        ],
+        "locations": [
+          {
+            "geonames_details": {
+              "continent_code": "EU",
+              "continent_name": "Europe",
+              "country_code": "GB",
+              "country_name": "United Kingdom",
+              "country_subdivision_code": "ENG",
+              "country_subdivision_name": "England",
+              "lat": 52.6386,
+              "lng": -1.13169,
+              "name": "Leicester"
+            },
+            "geonames_id": 2644668
+          }
+        ],
+        "names": [
+          {
+            "lang": null,
+            "types": [
+              "acronym"
+            ],
+            "value": "LRI"
+          },
+          {
+            "lang": "en",
+            "types": [
+              "ror_display",
+              "label"
+            ],
+            "value": "Leicester Royal Infirmary"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "https://ror.org/02fha3693",
+            "label": "University Hospitals of Leicester NHS Trust",
+            "type": "parent"
+          },
+          {
+            "id": "https://ror.org/04h699437",
+            "label": "University of Leicester",
+            "type": "related"
+          }
+        ],
+        "status": "active",
+        "types": [
+          "healthcare"
+        ]
+      },
+      "score": 0.53,
+      "substring": "Leicester University"
+    },
+    {
+      "chosen": false,
+      "matching_type": "HEURISTICS",
+      "organization": {
+        "admin": {
+          "created": {
+            "date": "2018-11-14",
+            "schema_version": "1.0"
+          },
+          "last_modified": {
+            "date": "2024-12-11",
+            "schema_version": "2.1"
+          }
+        },
+        "domains": [],
+        "established": 2012,
+        "external_ids": [
+          {
+            "all": [
+              "grid.454375.4"
+            ],
+            "preferred": "grid.454375.4",
+            "type": "grid"
+          }
+        ],
+        "id": "https://ror.org/04s4s0979",
+        "links": [
+          {
+            "type": "website",
+            "value": "http://www.leicsrespiratorybru.nihr.ac.uk/about-us/"
+          }
+        ],
+        "locations": [
+          {
+            "geonames_details": {
+              "continent_code": "EU",
+              "continent_name": "Europe",
+              "country_code": "GB",
+              "country_name": "United Kingdom",
+              "country_subdivision_code": "ENG",
+              "country_subdivision_name": "England",
+              "lat": 52.6386,
+              "lng": -1.13169,
+              "name": "Leicester"
+            },
+            "geonames_id": 2644668
+          }
+        ],
+        "names": [
+          {
+            "lang": "en",
+            "types": [
+              "ror_display",
+              "label"
+            ],
+            "value": "NIHR Leicester Respiratory Biomedical Research Unit"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "https://ror.org/02fha3693",
+            "label": "University Hospitals of Leicester NHS Trust",
+            "type": "parent"
+          },
+          {
+            "id": "https://ror.org/048a96r61",
+            "label": "Glenfield Hospital",
+            "type": "related"
+          },
+          {
+            "id": "https://ror.org/04h699437",
+            "label": "University of Leicester",
+            "type": "related"
+          }
+        ],
+        "status": "active",
+        "types": [
+          "government"
+        ]
+      },
+      "score": 0.51,
+      "substring": "Leicester University"
+    }
+  ],
+  "number_of_results": 12
+}

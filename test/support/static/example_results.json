@@ -1,0 +1,2083 @@
+{
+  "items": [
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1887,
+      "external_ids": [
+        {
+          "all": [
+            "501100001780",
+            "100008690",
+            "100010552"
+          ],
+          "preferred": "501100001780",
+          "type": "fundref"
+        },
+        {
+          "all": [
+            "grid.1017.7"
+          ],
+          "preferred": "grid.1017.7",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "0000 0001 2163 3550"
+          ],
+          "preferred": null,
+          "type": "isni"
+        },
+        {
+          "all": [
+            "Q1057890"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/04ttjf776",
+      "links": [
+        {
+          "type": "website",
+          "value": "https://www.rmit.edu.au/"
+        },
+        {
+          "type": "wikipedia",
+          "value": "http://en.wikipedia.org/wiki/RMIT_University"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "OC",
+            "continent_name": "Oceania",
+            "country_code": "AU",
+            "country_name": "Australia",
+            "country_subdivision_code": "VIC",
+            "country_subdivision_name": "Victoria",
+            "lat": -37.814,
+            "lng": 144.96332,
+            "name": "Melbourne"
+          },
+          "geonames_id": 2158177
+        }
+      ],
+      "names": [
+        {
+          "lang": null,
+          "types": [
+            "acronym"
+          ],
+          "value": "RMIT"
+        },
+        {
+          "lang": "en",
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "RMIT University"
+        },
+        {
+          "lang": "en",
+          "types": [
+            "alias"
+          ],
+          "value": "Royal Melbourne Institute of Technology University"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "https://ror.org/039p7nx39",
+          "label": "ARC Centre of Excellence for Automated Decision-Making and Society",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/03m3ca021",
+          "label": "RMIT Europe",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/004axh929",
+          "label": "RMIT Vietnam",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/010mv7n52",
+          "label": "Austin Hospital",
+          "type": "related"
+        }
+      ],
+      "status": "active",
+      "types": [
+        "education",
+        "funder"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1964,
+      "external_ids": [
+        {
+          "all": [
+            "501100001215"
+          ],
+          "preferred": null,
+          "type": "fundref"
+        },
+        {
+          "all": [
+            "grid.1018.8"
+          ],
+          "preferred": "grid.1018.8",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "0000 0001 2342 0938"
+          ],
+          "preferred": null,
+          "type": "isni"
+        },
+        {
+          "all": [
+            "Q1478723"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/01rxfrp27",
+      "links": [
+        {
+          "type": "website",
+          "value": "http://www.latrobe.edu.au/"
+        },
+        {
+          "type": "wikipedia",
+          "value": "http://en.wikipedia.org/wiki/La_Trobe_University"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "OC",
+            "continent_name": "Oceania",
+            "country_code": "AU",
+            "country_name": "Australia",
+            "country_subdivision_code": "VIC",
+            "country_subdivision_name": "Victoria",
+            "lat": -37.814,
+            "lng": 144.96332,
+            "name": "Melbourne"
+          },
+          "geonames_id": 2158177
+        }
+      ],
+      "names": [
+        {
+          "lang": "en",
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "La Trobe University"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "https://ror.org/010mv7n52",
+          "label": "Austin Hospital",
+          "type": "related"
+        },
+        {
+          "id": "https://ror.org/0484pjq71",
+          "label": "Box Hill Hospital",
+          "type": "related"
+        },
+        {
+          "id": "https://ror.org/03grnna41",
+          "label": "Royal Women's Hospital",
+          "type": "related"
+        }
+      ],
+      "status": "active",
+      "types": [
+        "education",
+        "funder"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1967,
+      "external_ids": [
+        {
+          "all": [
+            "501100001790"
+          ],
+          "preferred": null,
+          "type": "fundref"
+        },
+        {
+          "all": [
+            "grid.1023.0"
+          ],
+          "preferred": "grid.1023.0",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "0000 0001 2193 0854"
+          ],
+          "preferred": null,
+          "type": "isni"
+        },
+        {
+          "all": [
+            "Q1053985"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/023q4bk22",
+      "links": [
+        {
+          "type": "website",
+          "value": "https://www.cqu.edu.au/"
+        },
+        {
+          "type": "wikipedia",
+          "value": "http://en.wikipedia.org/wiki/Central_Queensland_University"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "OC",
+            "continent_name": "Oceania",
+            "country_code": "AU",
+            "country_name": "Australia",
+            "country_subdivision_code": "QLD",
+            "country_subdivision_name": "Queensland",
+            "lat": -23.38032,
+            "lng": 150.50595,
+            "name": "Rockhampton"
+          },
+          "geonames_id": 2151437
+        }
+      ],
+      "names": [
+        {
+          "lang": null,
+          "types": [
+            "acronym"
+          ],
+          "value": "CQU"
+        },
+        {
+          "lang": "en",
+          "types": [
+            "alias"
+          ],
+          "value": "CQUniversity"
+        },
+        {
+          "lang": "en",
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "Central Queensland University"
+        }
+      ],
+      "relationships": [],
+      "status": "active",
+      "types": [
+        "education",
+        "funder"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1987,
+      "external_ids": [
+        {
+          "all": [
+            "501100001789"
+          ],
+          "preferred": null,
+          "type": "fundref"
+        },
+        {
+          "all": [
+            "grid.1033.1"
+          ],
+          "preferred": "grid.1033.1",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "0000 0004 0405 3820"
+          ],
+          "preferred": null,
+          "type": "isni"
+        },
+        {
+          "all": [
+            "Q892188"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/006jxzx88",
+      "links": [
+        {
+          "type": "website",
+          "value": "http://bond.edu.au/"
+        },
+        {
+          "type": "wikipedia",
+          "value": "https://en.wikipedia.org/wiki/Bond_University"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "OC",
+            "continent_name": "Oceania",
+            "country_code": "AU",
+            "country_name": "Australia",
+            "country_subdivision_code": "QLD",
+            "country_subdivision_name": "Queensland",
+            "lat": -28.00029,
+            "lng": 153.43088,
+            "name": "Gold Coast"
+          },
+          "geonames_id": 2165087
+        }
+      ],
+      "names": [
+        {
+          "lang": "en",
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "Bond University"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "https://ror.org/05eq01d13",
+          "label": "Gold Coast Hospital",
+          "type": "related"
+        },
+        {
+          "id": "https://ror.org/0257s2812",
+          "label": "Robina Hospital",
+          "type": "related"
+        }
+      ],
+      "status": "active",
+      "types": [
+        "education",
+        "funder"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1989,
+      "external_ids": [
+        {
+          "all": [
+            "501100001769"
+          ],
+          "preferred": null,
+          "type": "fundref"
+        },
+        {
+          "all": [
+            "grid.1037.5"
+          ],
+          "preferred": "grid.1037.5",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "0000 0004 0368 0777"
+          ],
+          "preferred": null,
+          "type": "isni"
+        },
+        {
+          "all": [
+            "Q1066188"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/00wfvh315",
+      "links": [
+        {
+          "type": "website",
+          "value": "http://www.csu.edu.au/"
+        },
+        {
+          "type": "wikipedia",
+          "value": "https://en.wikipedia.org/wiki/Charles_Sturt_University"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "OC",
+            "continent_name": "Oceania",
+            "country_code": "AU",
+            "country_name": "Australia",
+            "country_subdivision_code": "NSW",
+            "country_subdivision_name": "New South Wales",
+            "lat": -33.41665,
+            "lng": 149.5806,
+            "name": "Bathurst"
+          },
+          "geonames_id": 2176632
+        }
+      ],
+      "names": [
+        {
+          "lang": null,
+          "types": [
+            "acronym"
+          ],
+          "value": "CSU"
+        },
+        {
+          "lang": "en",
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "Charles Sturt University"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "https://ror.org/05newpx76",
+          "label": "Wagga Wagga Base Hospital",
+          "type": "related"
+        }
+      ],
+      "status": "active",
+      "types": [
+        "education",
+        "funder"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1986,
+      "external_ids": [
+        {
+          "all": [
+            "100008561"
+          ],
+          "preferred": null,
+          "type": "fundref"
+        },
+        {
+          "all": [
+            "grid.1056.2"
+          ],
+          "preferred": "grid.1056.2",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "0000 0001 2224 8486"
+          ],
+          "preferred": null,
+          "type": "isni"
+        },
+        {
+          "all": [
+            "Q3151717"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/05ktbsm52",
+      "links": [
+        {
+          "type": "website",
+          "value": "http://www.burnet.edu.au/"
+        },
+        {
+          "type": "wikipedia",
+          "value": "https://en.wikipedia.org/wiki/Burnet_Institute"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "OC",
+            "continent_name": "Oceania",
+            "country_code": "AU",
+            "country_name": "Australia",
+            "country_subdivision_code": "VIC",
+            "country_subdivision_name": "Victoria",
+            "lat": -37.814,
+            "lng": 144.96332,
+            "name": "Melbourne"
+          },
+          "geonames_id": 2158177
+        }
+      ],
+      "names": [
+        {
+          "lang": "en",
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "Burnet Institute"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "https://ror.org/02bfwt286",
+          "label": "Monash University",
+          "type": "related"
+        },
+        {
+          "id": "https://ror.org/01ej9dk98",
+          "label": "University of Melbourne",
+          "type": "related"
+        }
+      ],
+      "status": "active",
+      "types": [
+        "funder",
+        "nonprofit"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1998,
+      "external_ids": [
+        {
+          "all": [
+            "grid.1064.3"
+          ],
+          "preferred": "grid.1064.3",
+          "type": "grid"
+        }
+      ],
+      "id": "https://ror.org/00nx6aa03",
+      "links": [
+        {
+          "type": "website",
+          "value": "http://research.mater.org.au/"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "OC",
+            "continent_name": "Oceania",
+            "country_code": "AU",
+            "country_name": "Australia",
+            "country_subdivision_code": "QLD",
+            "country_subdivision_name": "Queensland",
+            "lat": -27.46794,
+            "lng": 153.02809,
+            "name": "Brisbane"
+          },
+          "geonames_id": 2174003
+        }
+      ],
+      "names": [
+        {
+          "lang": "en",
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "Mater Research"
+        }
+      ],
+      "relationships": [],
+      "status": "active",
+      "types": [
+        "facility"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1951,
+      "external_ids": [
+        {
+          "all": [
+            "grid.1073.5"
+          ],
+          "preferred": "grid.1073.5",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "0000 0004 0626 201X"
+          ],
+          "preferred": null,
+          "type": "isni"
+        },
+        {
+          "all": [
+            "Q7592065"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/02k3cxs74",
+      "links": [
+        {
+          "type": "website",
+          "value": "https://www.svi.edu.au/"
+        },
+        {
+          "type": "wikipedia",
+          "value": "https://en.wikipedia.org/wiki/St._Vincent's_Institute_of_Medical_Research"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "OC",
+            "continent_name": "Oceania",
+            "country_code": "AU",
+            "country_name": "Australia",
+            "country_subdivision_code": "VIC",
+            "country_subdivision_name": "Victoria",
+            "lat": -37.79839,
+            "lng": 144.97833,
+            "name": "Fitzroy"
+          },
+          "geonames_id": 2166584
+        }
+      ],
+      "names": [
+        {
+          "lang": null,
+          "types": [
+            "acronym"
+          ],
+          "value": "SVI"
+        },
+        {
+          "lang": "en",
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "St Vincents Institute of Medical Research"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "https://ror.org/001kjn539",
+          "label": "St Vincent's Hospital",
+          "type": "related"
+        },
+        {
+          "id": "https://ror.org/01ej9dk98",
+          "label": "University of Melbourne",
+          "type": "related"
+        }
+      ],
+      "status": "active",
+      "types": [
+        "nonprofit"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1989,
+      "external_ids": [
+        {
+          "all": [
+            "501100001208",
+            "100009021"
+          ],
+          "preferred": "501100001208",
+          "type": "fundref"
+        },
+        {
+          "all": [
+            "grid.1076.0"
+          ],
+          "preferred": "grid.1076.0",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "0000 0004 0626 1885"
+          ],
+          "preferred": null,
+          "type": "isni"
+        },
+        {
+          "all": [
+            "Q17006364"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/046fa4y88",
+      "links": [
+        {
+          "type": "website",
+          "value": "http://www.hri.org.au/"
+        },
+        {
+          "type": "wikipedia",
+          "value": "https://en.wikipedia.org/wiki/Heart_Research_Institute"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "OC",
+            "continent_name": "Oceania",
+            "country_code": "AU",
+            "country_name": "Australia",
+            "country_subdivision_code": "NSW",
+            "country_subdivision_name": "New South Wales",
+            "lat": -33.89835,
+            "lng": 151.17754,
+            "name": "Newtown"
+          },
+          "geonames_id": 2155386
+        }
+      ],
+      "names": [
+        {
+          "lang": null,
+          "types": [
+            "acronym"
+          ],
+          "value": "HRI"
+        },
+        {
+          "lang": "en",
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "The Heart Research Institute"
+        }
+      ],
+      "relationships": [],
+      "status": "active",
+      "types": [
+        "facility",
+        "funder"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1989,
+      "external_ids": [
+        {
+          "all": [
+            "grid.1088.1"
+          ],
+          "preferred": "grid.1088.1",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "0000 0004 0622 6844"
+          ],
+          "preferred": null,
+          "type": "isni"
+        },
+        {
+          "all": [
+            "Q27982338"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/02d439m40",
+      "links": [
+        {
+          "type": "website",
+          "value": "https://www.epipsi.gr/"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "EU",
+            "continent_name": "Europe",
+            "country_code": "GR",
+            "country_name": "Greece",
+            "country_subdivision_code": "I",
+            "country_subdivision_name": "Attica",
+            "lat": 37.98376,
+            "lng": 23.72784,
+            "name": "Athens"
+          },
+          "geonames_id": 264371
+        }
+      ],
+      "names": [
+        {
+          "lang": null,
+          "types": [
+            "acronym"
+          ],
+          "value": "UMHRI"
+        },
+        {
+          "lang": "en",
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "University Mental Health Research Institute"
+        }
+      ],
+      "relationships": [],
+      "status": "active",
+      "types": [
+        "education"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1904,
+      "external_ids": [
+        {
+          "all": [
+            "501100000767"
+          ],
+          "preferred": null,
+          "type": "fundref"
+        },
+        {
+          "all": [
+            "grid.1121.3"
+          ],
+          "preferred": "grid.1121.3",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "0000 0004 0396 1069"
+          ],
+          "preferred": null,
+          "type": "isni"
+        },
+        {
+          "all": [
+            "Q243278"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/04h08p482",
+      "links": [
+        {
+          "type": "website",
+          "value": "https://www.rolls-royce.com/"
+        },
+        {
+          "type": "wikipedia",
+          "value": "http://en.wikipedia.org/wiki/Rolls-Royce_Holdings"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "EU",
+            "continent_name": "Europe",
+            "country_code": "GB",
+            "country_name": "United Kingdom",
+            "country_subdivision_code": "ENG",
+            "country_subdivision_name": "England",
+            "lat": 52.92277,
+            "lng": -1.47663,
+            "name": "Derby"
+          },
+          "geonames_id": 2651347
+        }
+      ],
+      "names": [
+        {
+          "lang": null,
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "Rolls-Royce (United Kingdom)"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "https://ror.org/01x3p5p96",
+          "label": "Rolls-Royce (Canada)",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/05jeza980",
+          "label": "Rolls-Royce (Germany)",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/018a0bk66",
+          "label": "Rolls-Royce (Norway)",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/055ef6019",
+          "label": "Rolls-Royce (Sweden)",
+          "type": "child"
+        }
+      ],
+      "status": "active",
+      "types": [
+        "company",
+        "funder"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1909,
+      "external_ids": [
+        {
+          "all": [
+            "501100000775"
+          ],
+          "preferred": null,
+          "type": "fundref"
+        },
+        {
+          "all": [
+            "grid.1236.6"
+          ],
+          "preferred": "grid.1236.6",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "0000 0001 0790 9434"
+          ],
+          "preferred": null,
+          "type": "isni"
+        },
+        {
+          "all": [
+            "Q152057"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/01zctcs90",
+      "links": [
+        {
+          "type": "website",
+          "value": "http://www.bp.com/"
+        },
+        {
+          "type": "wikipedia",
+          "value": "http://en.wikipedia.org/wiki/BP"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "EU",
+            "continent_name": "Europe",
+            "country_code": "GB",
+            "country_name": "United Kingdom",
+            "country_subdivision_code": "ENG",
+            "country_subdivision_name": "England",
+            "lat": 51.50853,
+            "lng": -0.12574,
+            "name": "London"
+          },
+          "geonames_id": 2643743
+        }
+      ],
+      "names": [
+        {
+          "lang": null,
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "BP (United Kingdom)"
+        },
+        {
+          "lang": null,
+          "types": [
+            "alias"
+          ],
+          "value": "BP Amoco"
+        },
+        {
+          "lang": null,
+          "types": [
+            "alias"
+          ],
+          "value": "The British Petroleum Company"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "https://ror.org/051177492",
+          "label": "BP (Canada)",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/03f9m1k43",
+          "label": "BP (France)",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/048q66y67",
+          "label": "BP (Germany)",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/05dfvhh79",
+          "label": "BP (Spain)",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/051659894",
+          "label": "BP (United States)",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/0503ft796",
+          "label": "Castrol (United Kingdom)",
+          "type": "child"
+        }
+      ],
+      "status": "active",
+      "types": [
+        "company",
+        "funder"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1873,
+      "external_ids": [
+        {
+          "all": [
+            "grid.1281.a"
+          ],
+          "preferred": "grid.1281.a",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "Q821293"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/05m7zw681",
+      "links": [
+        {
+          "type": "website",
+          "value": "http://www.riotinto.com/"
+        },
+        {
+          "type": "wikipedia",
+          "value": "https://en.wikipedia.org/wiki/Rio_Tinto_Group"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "EU",
+            "continent_name": "Europe",
+            "country_code": "GB",
+            "country_name": "United Kingdom",
+            "country_subdivision_code": "ENG",
+            "country_subdivision_name": "England",
+            "lat": 51.50853,
+            "lng": -0.12574,
+            "name": "London"
+          },
+          "geonames_id": 2643743
+        }
+      ],
+      "names": [
+        {
+          "lang": null,
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "Rio Tinto (United Kingdom)"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "https://ror.org/03z28c516",
+          "label": "Rio Tinto (Australia)",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/00mv4xe50",
+          "label": "Rio Tinto (Canada)",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/01gykgk63",
+          "label": "Rio Tinto (France)",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/01z3j2f47",
+          "label": "Rio Tinto (Switzerland)",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/02vhqqh86",
+          "label": "Rio Tinto (United States)",
+          "type": "child"
+        }
+      ],
+      "status": "active",
+      "types": [
+        "company"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1946,
+      "external_ids": [
+        {
+          "all": [
+            "grid.1403.6"
+          ],
+          "preferred": "grid.1403.6",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "0000 0004 0462 5657"
+          ],
+          "preferred": null,
+          "type": "isni"
+        }
+      ],
+      "id": "https://ror.org/03awtex73",
+      "links": [
+        {
+          "type": "website",
+          "value": "http://www.arup.com/Global_locations/USA.aspx"
+        },
+        {
+          "type": "wikipedia",
+          "value": "https://www.arup.com/offices/united-states-of-america"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "MA",
+            "country_subdivision_name": "Massachusetts",
+            "lat": 42.3751,
+            "lng": -71.10561,
+            "name": "Cambridge"
+          },
+          "geonames_id": 4931972
+        }
+      ],
+      "names": [
+        {
+          "lang": null,
+          "types": [
+            "alias"
+          ],
+          "value": "Arup"
+        },
+        {
+          "lang": null,
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "Arup Group (United States)"
+        },
+        {
+          "lang": null,
+          "types": [
+            "alias"
+          ],
+          "value": "Ove N. Arup Consulting Engineers"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "https://ror.org/057d3rj91",
+          "label": "Arup Group (United Kingdom)",
+          "type": "parent"
+        }
+      ],
+      "status": "active",
+      "types": [
+        "company"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1980,
+      "external_ids": [
+        {
+          "all": [
+            "501100000577",
+            "501100000842"
+          ],
+          "preferred": "501100000577",
+          "type": "fundref"
+        },
+        {
+          "all": [
+            "grid.1453.3"
+          ],
+          "preferred": "grid.1453.3",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "0000 0001 1091 7144"
+          ],
+          "preferred": null,
+          "type": "isni"
+        },
+        {
+          "all": [
+            "Q593786"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/00kv9pj15",
+      "links": [
+        {
+          "type": "website",
+          "value": "http://www.btplc.com/"
+        },
+        {
+          "type": "wikipedia",
+          "value": "http://en.wikipedia.org/wiki/BT_Group"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "EU",
+            "continent_name": "Europe",
+            "country_code": "GB",
+            "country_name": "United Kingdom",
+            "country_subdivision_code": "ENG",
+            "country_subdivision_name": "England",
+            "lat": 51.50853,
+            "lng": -0.12574,
+            "name": "London"
+          },
+          "geonames_id": 2643743
+        }
+      ],
+      "names": [
+        {
+          "lang": null,
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "BT Group (United Kingdom)"
+        },
+        {
+          "lang": null,
+          "types": [
+            "alias"
+          ],
+          "value": "British Telecommunications"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "https://ror.org/01xzpd518",
+          "label": "BT Archives",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/03308db07",
+          "label": "BT Research",
+          "type": "child"
+        }
+      ],
+      "status": "active",
+      "types": [
+        "company",
+        "funder"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1906,
+      "external_ids": [
+        {
+          "all": [
+            "grid.1491.d"
+          ],
+          "preferred": "grid.1491.d",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "0000 0004 0642 1746"
+          ],
+          "preferred": null,
+          "type": "isni"
+        },
+        {
+          "all": [
+            "Q6786513"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/03mjtdk61",
+      "links": [
+        {
+          "type": "website",
+          "value": "http://www.mater.org.au/"
+        },
+        {
+          "type": "wikipedia",
+          "value": "https://en.wikipedia.org/wiki/Mater_Health_Services"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "OC",
+            "continent_name": "Oceania",
+            "country_code": "AU",
+            "country_name": "Australia",
+            "country_subdivision_code": "QLD",
+            "country_subdivision_name": "Queensland",
+            "lat": -27.46794,
+            "lng": 153.02809,
+            "name": "Brisbane"
+          },
+          "geonames_id": 2174003
+        }
+      ],
+      "names": [
+        {
+          "lang": "en",
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "Mater Health Services"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "https://ror.org/05wqhv079",
+          "label": "Mater Adult Hospital",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/04mxrtj31",
+          "label": "Mater Children's Hospital",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/01k4cfw02",
+          "label": "Mater Misericordiae Hospital",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/03j4rdg62",
+          "label": "Mater Mothers' Hospital",
+          "type": "child"
+        },
+        {
+          "id": "https://ror.org/03w94w157",
+          "label": "Mater Private Hospital",
+          "type": "child"
+        }
+      ],
+      "status": "active",
+      "types": [
+        "healthcare"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1826,
+      "external_ids": [
+        {
+          "all": [
+            "grid.1504.0"
+          ],
+          "preferred": "grid.1504.0",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "Q733487"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/04yyp8h20",
+      "links": [
+        {
+          "type": "website",
+          "value": "https://www.pilkington.com/en-GB/uk"
+        },
+        {
+          "type": "wikipedia",
+          "value": "https://en.wikipedia.org/wiki/Pilkington"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "EU",
+            "continent_name": "Europe",
+            "country_code": "GB",
+            "country_name": "United Kingdom",
+            "country_subdivision_code": "ENG",
+            "country_subdivision_name": "England",
+            "lat": 53.45,
+            "lng": -2.73333,
+            "name": "St Helens"
+          },
+          "geonames_id": 2638785
+        }
+      ],
+      "names": [
+        {
+          "lang": null,
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "Pilkington (United Kingdom)"
+        }
+      ],
+      "relationships": [],
+      "status": "active",
+      "types": [
+        "company"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1976,
+      "external_ids": [
+        {
+          "all": [
+            "grid.1543.3"
+          ],
+          "preferred": "grid.1543.3",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "0000 0004 0522 6113"
+          ],
+          "preferred": null,
+          "type": "isni"
+        }
+      ],
+      "id": "https://ror.org/022rkxt86",
+      "links": [
+        {
+          "type": "website",
+          "value": "http://www.trojantechnologies.com/"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "CA",
+            "country_name": "Canada",
+            "country_subdivision_code": "ON",
+            "country_subdivision_name": "Ontario",
+            "lat": 42.98339,
+            "lng": -81.23304,
+            "name": "London"
+          },
+          "geonames_id": 6058560
+        }
+      ],
+      "names": [
+        {
+          "lang": null,
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "Trojan Technologies (Canada)"
+        }
+      ],
+      "relationships": [],
+      "status": "active",
+      "types": [
+        "company"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1871,
+      "external_ids": [
+        {
+          "all": [
+            "grid.1623.6"
+          ],
+          "preferred": "grid.1623.6",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "0000 0004 0432 511X"
+          ],
+          "preferred": null,
+          "type": "isni"
+        },
+        {
+          "all": [
+            "Q7713086"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/01wddqe20",
+      "links": [
+        {
+          "type": "website",
+          "value": "https://www.alfredhealth.org.au/the-alfred"
+        },
+        {
+          "type": "wikipedia",
+          "value": "https://en.wikipedia.org/wiki/The_Alfred_Hospital"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "OC",
+            "continent_name": "Oceania",
+            "country_code": "AU",
+            "country_name": "Australia",
+            "country_subdivision_code": "VIC",
+            "country_subdivision_name": "Victoria",
+            "lat": -37.814,
+            "lng": 144.96332,
+            "name": "Melbourne"
+          },
+          "geonames_id": 2158177
+        }
+      ],
+      "names": [
+        {
+          "lang": "en",
+          "types": [
+            "alias"
+          ],
+          "value": "The Alfred"
+        },
+        {
+          "lang": "en",
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "The Alfred Hospital"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "https://ror.org/04scfb908",
+          "label": "Alfred Health",
+          "type": "parent"
+        },
+        {
+          "id": "https://ror.org/02bfwt286",
+          "label": "Monash University",
+          "type": "related"
+        }
+      ],
+      "status": "active",
+      "types": [
+        "healthcare"
+      ]
+    },
+    {
+      "admin": {
+        "created": {
+          "date": "2018-11-14",
+          "schema_version": "1.0"
+        },
+        "last_modified": {
+          "date": "2024-12-11",
+          "schema_version": "2.1"
+        }
+      },
+      "domains": [],
+      "established": 1989,
+      "external_ids": [
+        {
+          "all": [
+            "grid.1694.a"
+          ],
+          "preferred": "grid.1694.a",
+          "type": "grid"
+        },
+        {
+          "all": [
+            "Q8031120"
+          ],
+          "preferred": null,
+          "type": "wikidata"
+        }
+      ],
+      "id": "https://ror.org/03kwrfk72",
+      "links": [
+        {
+          "type": "website",
+          "value": "http://www.wch.sa.gov.au/"
+        },
+        {
+          "type": "wikipedia",
+          "value": "https://en.wikipedia.org/wiki/Women's_and_Children's_Hospital"
+        }
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "OC",
+            "continent_name": "Oceania",
+            "country_code": "AU",
+            "country_name": "Australia",
+            "country_subdivision_code": "SA",
+            "country_subdivision_name": "South Australia",
+            "lat": -34.92866,
+            "lng": 138.59863,
+            "name": "Adelaide"
+          },
+          "geonames_id": 2078025
+        }
+      ],
+      "names": [
+        {
+          "lang": null,
+          "types": [
+            "acronym"
+          ],
+          "value": "WCH"
+        },
+        {
+          "lang": "en",
+          "types": [
+            "ror_display",
+            "label"
+          ],
+          "value": "Women's and Children's Hospital"
+        }
+      ],
+      "relationships": [
+        {
+          "id": "https://ror.org/01kpzv902",
+          "label": "Flinders University",
+          "type": "related"
+        },
+        {
+          "id": "https://ror.org/00892tw58",
+          "label": "University of Adelaide",
+          "type": "related"
+        },
+        {
+          "id": "https://ror.org/01p93h210",
+          "label": "University of South Australia",
+          "type": "related"
+        }
+      ],
+      "status": "active",
+      "types": [
+        "healthcare"
+      ]
+    }
+  ],
+  "meta": {
+    "continents": [
+      {
+        "count": 43168,
+        "id": "eu",
+        "title": "Europe"
+      },
+      {
+        "count": 36887,
+        "id": "na",
+        "title": "North America"
+      },
+      {
+        "count": 20748,
+        "id": "as",
+        "title": "Asia"
+      },
+      {
+        "count": 3640,
+        "id": "af",
+        "title": "Africa"
+      },
+      {
+        "count": 3446,
+        "id": "sa",
+        "title": "South America"
+      },
+      {
+        "count": 1917,
+        "id": "oc",
+        "title": "Oceania"
+      },
+      {
+        "count": 2,
+        "id": "an",
+        "title": "Antarctica"
+      }
+    ],
+    "countries": [
+      {
+        "count": 31919,
+        "id": "us",
+        "title": "United States"
+      },
+      {
+        "count": 7546,
+        "id": "gb",
+        "title": "United Kingdom"
+      },
+      {
+        "count": 5299,
+        "id": "de",
+        "title": "Germany"
+      },
+      {
+        "count": 4919,
+        "id": "cn",
+        "title": "China"
+      },
+      {
+        "count": 4799,
+        "id": "fr",
+        "title": "France"
+      },
+      {
+        "count": 4007,
+        "id": "jp",
+        "title": "Japan"
+      },
+      {
+        "count": 3557,
+        "id": "ca",
+        "title": "Canada"
+      },
+      {
+        "count": 3208,
+        "id": "in",
+        "title": "India"
+      },
+      {
+        "count": 2804,
+        "id": "cz",
+        "title": "Czech Republic"
+      },
+      {
+        "count": 2137,
+        "id": "it",
+        "title": "Italy"
+      }
+    ],
+    "statuses": [
+      {
+        "count": 109806,
+        "id": "active",
+        "title": "active"
+      }
+    ],
+    "types": [
+      {
+        "count": 30199,
+        "id": "company",
+        "title": "company"
+      },
+      {
+        "count": 21507,
+        "id": "education",
+        "title": "education"
+      },
+      {
+        "count": 16948,
+        "id": "funder",
+        "title": "funder"
+      },
+      {
+        "count": 14648,
+        "id": "nonprofit",
+        "title": "nonprofit"
+      },
+      {
+        "count": 13376,
+        "id": "healthcare",
+        "title": "healthcare"
+      },
+      {
+        "count": 11437,
+        "id": "facility",
+        "title": "facility"
+      },
+      {
+        "count": 8643,
+        "id": "other",
+        "title": "other"
+      },
+      {
+        "count": 7122,
+        "id": "government",
+        "title": "government"
+      },
+      {
+        "count": 3024,
+        "id": "archive",
+        "title": "archive"
+      }
+    ]
+  },
+  "number_of_results": 109806,
+  "time_taken": 20
+}
