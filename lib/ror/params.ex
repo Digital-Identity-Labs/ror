@@ -33,7 +33,7 @@ defmodule ROR.Params do
 
   @spec page(page :: map() | nil | integer() | binary()) :: binary()
   def page(nil) do
-    1
+    nil
   end
 
   def page(%{page: page}) do
@@ -41,7 +41,7 @@ defmodule ROR.Params do
   end
 
   def page(zero) when zero == 0 or zero == "0" do
-    "1"
+    nil
   end
 
   def page(value) do
