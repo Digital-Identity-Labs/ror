@@ -14,7 +14,7 @@ defmodule ROR.Client do
     max_retries: 3
   ]
 
-  @common_options [http: @default_http_options, params: [], api_url: @default_url]
+  @common_options [http: @default_http_options, params: [], headers: [], api_url: @default_url]
 
   @default_get_options  @common_options ++ []
   @allowed_get_options  Keyword.keys(@default_get_options)
@@ -38,24 +38,24 @@ defmodule ROR.Client do
     opts = Keyword.merge(@default_get_options, (opts || []))
            |> Keyword.take(@allowed_get_options)
 
-    Req.get!(http(opts[:http]), url: ID.path(id)).body
+    Req.get!(http(opts[:http]), url: ID.path(id), headers: opts[:headers]).body
   end
 
   @doc """
   XX
   """
-  @spec list!(opts :: keyword()) ::  map()
+  @spec list!(opts :: keyword()) :: map()
   def list!(opts \\ []) do
     opts = Keyword.merge(@default_list_options, (opts || []))
            |> Keyword.take(@allowed_list_options)
 
-    Req.get!(http(opts[:http]), params: opts[:params]).body
+    Req.get!(http(opts[:http]), params: opts[:params], headers: opts[:headers]).body
   end
 
   @doc """
   XX
   """
-  @spec query!(value :: binary(), opts :: keyword()) ::  map()
+  @spec query!(value :: binary(), opts :: keyword()) :: map()
   def query!(value, opts \\ []) do
     opts = Keyword.merge(@default_query_options, (opts || []))
            |> Keyword.take(@allowed_query_options)
@@ -64,13 +64,13 @@ defmodule ROR.Client do
 
     params = Keyword.merge(opts[:params], [query: value])
 
-    Req.get!(http(opts[:http]), params: params).body
+    Req.get!(http(opts[:http]), params: params, headers: opts[:headers]).body
   end
 
   @doc """
   XX
   """
-  @spec query_advanced!(value :: binary(), opts :: keyword()) ::  map()
+  @spec query_advanced!(value :: binary(), opts :: keyword()) :: map()
   def query_advanced!(value, opts \\ []) do
     opts = Keyword.merge(@default_query_options, (opts || []))
            |> Keyword.take(@allowed_query_options)
@@ -79,7 +79,7 @@ defmodule ROR.Client do
 
     params = Keyword.merge(opts[:params], ["query.advanced": value])
 
-    Req.get!(http(opts[:http]), params: params).body
+    Req.get!(http(opts[:http]), params: params, headers: opts[:headers]).body
   end
 
   @doc """
@@ -97,7 +97,7 @@ defmodule ROR.Client do
     if params[:filter], do: raise "Cannot pass a filter to this API function"
     if params[:page], do: raise "Cannot pass a page to this API function"
 
-    Req.get!(http(opts[:http]), params: params).body
+    Req.get!(http(opts[:http]), params: params, headers: opts[:headers]).body
   end
 
   @doc false

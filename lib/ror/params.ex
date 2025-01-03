@@ -80,4 +80,15 @@ defmodule ROR.Params do
     "#{value}"
   end
 
+  @spec headers(opts :: keyword() ) :: keyword()
+  def headers(opts) do
+    if opts[:client_id] do
+      [
+        client_id: [opts[:client_id]]
+      ]
+    else
+      []
+    end
+  end
+
 end

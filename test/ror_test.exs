@@ -39,6 +39,11 @@ defmodule RorTest do
       assert_raise RuntimeError, fn -> ROR.get!(@invalid_id) end
     end
 
+    test "will accept client_id string in opts and add an authentication header" do
+      assert %Organization{} = ROR.get!(@min_id, client_id: "testing")
+      ## TODO: This is not a useful test really
+    end
+
   end
 
   describe "list!/2" do
@@ -83,6 +88,13 @@ defmodule RorTest do
                                                 )
                                                 |> Map.get(:items)
                                                 |> List.first()
+    end
+
+    test "will accept client_id string in opts and add an authentication header" do
+      assert %Organization{} = ROR.list!(client_id: "testing")
+                               |> Map.get(:items)
+                               |> List.first()
+      ## TODO: This is not a useful test really
     end
 
   end
@@ -137,6 +149,13 @@ defmodule RorTest do
                                                 )
                                                 |> Map.get(:items)
                                                 |> List.first()
+    end
+
+    test "will accept client_id string in opts and add an authentication header" do
+      assert %Organization{} = ROR.quick_search!("Oxford", client_id: "testing")
+                               |> Map.get(:items)
+                               |> List.first()
+      ## TODO: This is not a useful test really
     end
 
   end
@@ -201,6 +220,13 @@ defmodule RorTest do
       assert_raise RuntimeError, fn -> ROR.search!(nil) end
     end
 
+    test "will accept client_id string in opts and add an authentication header" do
+      assert %Organization{} = ROR.search!("Oxford", client_id: "testing")
+                               |> Map.get(:items)
+                               |> List.first()
+      ## TODO: This is not a useful test really
+    end
+
   end
 
   describe "identify!/2" do
@@ -241,6 +267,11 @@ defmodule RorTest do
       assert_raise RuntimeError, fn -> ROR.identify!(nil) end
     end
 
+    test "will accept client_id string in opts and add an authentication header" do
+      assert %Matches{} = ROR.identify!("University of Leicester", client_id: "testing")
+      ## TODO: This is not a useful test really
+    end
+
   end
 
   describe "chosen_organization!/2" do
@@ -275,6 +306,11 @@ defmodule RorTest do
       assert_raise RuntimeError, fn -> ROR.chosen_organization!([page: 3]) end
       assert_raise RuntimeError, fn -> ROR.chosen_organization!("") end
       assert_raise RuntimeError, fn -> ROR.chosen_organization!(nil) end
+    end
+
+    test "will accept client_id string in opts and add an authentication header" do
+      assert %Organization{} = ROR.chosen_organization!("University of Leicester", client_id: "testing")
+      ## TODO: This is not a useful test really
     end
 
   end

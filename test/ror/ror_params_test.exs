@@ -102,4 +102,18 @@ defmodule RorParamsTest do
 
   end
 
+  describe "headers/1" do
+
+    test "if :client_id option has been set, returns headers including ROR's client-id info" do
+
+      assert [{:client_id, ["testtest"]}] = Params.headers([client_id: "testtest"])
+
+    end
+
+    test "if :client_id option has not been set, returns empty headers list" do
+      assert [] = Params.headers([])
+    end
+
+  end
+
 end

@@ -15,7 +15,7 @@ defmodule ROR do
   """
   @spec get!(id :: binary(), opts :: keyword()) ::  map()
   def get!(id, opts \\ []) do
-    Client.get!(id, opts)
+    Client.get!(id, headers: Params.headers(opts))
     |> Organization.extract()
   end
 
@@ -24,7 +24,7 @@ defmodule ROR do
   """
   @spec list!(opts :: keyword()) :: Results.t()
   def list!(opts \\ []) do
-    Client.list!(params: Params.generate(opts))
+    Client.list!(params: Params.generate(opts), headers: Params.headers(opts))
     |> Results.extract()
   end
 
@@ -33,7 +33,7 @@ defmodule ROR do
   """
   @spec quick_search!(value :: binary(), opts :: keyword()) :: Results.t()
   def quick_search!(search, opts \\ []) do
-    Client.query!(Params.query(search), params: Params.generate(opts))
+    Client.query!(Params.query(search), params: Params.generate(opts), headers: Params.headers(opts))
     |> Results.extract()
   end
 
@@ -42,7 +42,7 @@ defmodule ROR do
   """
   @spec search!(value :: binary(), opts :: keyword()) ::  Results.t()
   def search!(search, opts \\ []) do
-    Client.query_advanced!(Params.advanced_query(search), params: Params.generate(opts))
+    Client.query_advanced!(Params.advanced_query(search), params: Params.generate(opts), headers: Params.headers(opts))
     |> Results.extract()
   end
 
@@ -55,7 +55,7 @@ defmodule ROR do
     if opts[:filter], do: raise "Cannot pass a filter to this API function"
     if opts[:page], do: raise "Cannot pass a page to this API function"
 
-    Client.affiliation!(Params.query(search), opts)
+    Client.affiliation!(Params.query(search), headers: Params.headers(opts))
     |> Matches.extract()
   end
 
