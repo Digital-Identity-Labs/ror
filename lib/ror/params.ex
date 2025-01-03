@@ -22,13 +22,45 @@ defmodule ROR.Params do
   end
 
   @spec query(value :: binary()) :: binary()
-  def query(value) do
+  def query("") do
+    raise "Query string parameter is empty!"
+  end
+
+  def query(value) when is_binary(value) do
     Utils.escape_elastic(value)
   end
 
+  def query(nil) do
+    raise "Query string parameter is nil!"
+  end
+
+  def query(value) when is_atom(value) or is_integer(value) do
+    query("#{value}")
+  end
+
+  def query(value)  do
+    raise "Query string parameter was not actually a string!"
+  end
+
   @spec advanced_query(value :: binary()) :: binary()
-  def advanced_query(value) do
+  def advanced_query("") do
+    raise "Query string parameter is empty!"
+  end
+
+  def advanced_query(value) when is_binary(value) do
     Utils.escape_elastic(value)
+  end
+
+  def advanced_query(nil) do
+    raise "Query string parameter is nil!"
+  end
+
+  def advanced_query(value) when is_atom(value) or is_integer(value) do
+    query("#{value}")
+  end
+
+  def advanced_query(value)  do
+    raise "Query string parameter was not actually a string!"
   end
 
   @spec page(page :: map() | nil | integer() | binary()) :: binary()

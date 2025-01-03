@@ -60,6 +60,8 @@ defmodule ROR.Client do
     opts = Keyword.merge(@default_query_options, (opts || []))
            |> Keyword.take(@allowed_query_options)
 
+    if !is_binary(value), do: raise "No query string was passed to API call!"
+
     params = Keyword.merge(opts[:params], [query: value])
 
     Req.get!(http(opts[:http]), params: params).body
@@ -73,6 +75,8 @@ defmodule ROR.Client do
     opts = Keyword.merge(@default_query_options, (opts || []))
            |> Keyword.take(@allowed_query_options)
 
+    if !is_binary(value), do: raise "No query string was passed to API call!"
+
     params = Keyword.merge(opts[:params], ["query.advanced": value])
 
     Req.get!(http(opts[:http]), params: params).body
@@ -85,6 +89,8 @@ defmodule ROR.Client do
   def affiliation!(value, opts \\ []) do
     opts = Keyword.merge(@default_affiliation_options, (opts || []))
            |> Keyword.take(@allowed_affiliation_options)
+
+    if !is_binary(value), do: raise "No query string was passed to API call!"
 
     params = Keyword.merge(opts[:params], [affiliation: value])
 

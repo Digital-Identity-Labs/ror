@@ -24,7 +24,7 @@ defmodule ROR do
   """
   @spec list!(opts :: keyword()) :: Results.t()
   def list!(opts \\ []) do
-    Client.list!(Params.generate(opts))
+    Client.list!(params: Params.generate(opts))
     |> Results.extract()
   end
 
@@ -33,7 +33,7 @@ defmodule ROR do
   """
   @spec quick_search!(value :: binary(), opts :: keyword()) :: Results.t()
   def quick_search!(search, opts \\ []) do
-    Client.query!(Params.query(search), Params.generate(opts))
+    Client.query!(Params.query(search), params: Params.generate(opts))
     |> Results.extract()
   end
 
@@ -42,7 +42,7 @@ defmodule ROR do
   """
   @spec search!(value :: binary(), opts :: keyword()) ::  Results.t()
   def search!(search, opts \\ []) do
-    Client.query_advanced!(Params.advanced_query(search), Params.generate(opts))
+    Client.query_advanced!(Params.advanced_query(search), params: Params.generate(opts))
     |> Results.extract()
   end
 
@@ -51,6 +51,10 @@ defmodule ROR do
   """
   @spec identify!(value :: binary(), opts :: keyword()) :: Matches.t()
   def identify!(search, opts \\ []) do
+
+    if opts[:filter], do: raise "Cannot pass a filter to this API function"
+    if opts[:page], do: raise "Cannot pass a page to this API function"
+
     Client.affiliation!(Params.query(search), opts)
     |> Matches.extract()
   end
@@ -60,8 +64,7 @@ defmodule ROR do
   """
   @spec chosen_organization!(value :: binary(), opts :: keyword()) :: Organization.t() | nil
   def chosen_organization!(search, opts \\ []) do
-    Client.affiliation!(Params.query(search), opts)
-    |> Matches.extract()
+    identify!(search, opts)
     |> Matches.chosen_organization()
   end
 

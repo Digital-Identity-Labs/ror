@@ -50,6 +50,13 @@ defmodule RorParamsTest do
       assert "Bath College" = Params.query("Bath College")
     end
 
+    test "Raises an error if not passed a non-empty string, atom or integer" do
+      assert_raise RuntimeError, fn ->Params.query(nil) end
+      assert_raise RuntimeError, fn ->Params.query("") end
+      assert_raise RuntimeError, fn ->Params.query([]) end
+      assert_raise RuntimeError, fn ->Params.query([page: 4]) end
+    end
+
   end
 
   describe "advanced_query/1" do
@@ -60,6 +67,13 @@ defmodule RorParamsTest do
 
     test "URI encoding is not done at this stage, Req handles that" do
       assert "Bath College" = Params.advanced_query("Bath College")
+    end
+
+    test "Raises an error if not passed a non-empty string, atom or integer" do
+      assert_raise RuntimeError, fn ->Params.query(nil) end
+      assert_raise RuntimeError, fn ->Params.query("") end
+      assert_raise RuntimeError, fn ->Params.query([]) end
+      assert_raise RuntimeError, fn ->Params.query([page: 4]) end
     end
 
   end
