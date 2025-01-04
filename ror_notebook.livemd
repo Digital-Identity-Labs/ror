@@ -1,0 +1,10 @@
+<!-- livebook:{"app_settings":{"slug":"ror"}} -->
+
+# ROR Workbook
+
+```elixir
+Mix.install([{:ror, ">= 0.1.0"}])
+```
+
+
+<!-- livebook:{"offset":2213,"stamp":{"token":"XCP.XD0OIaQH31Umc3ti7T6rrdtZl3yQ09S5EmpDPMiE0b_Hx451Ot5LoKTHdDetdniLncta61P7vTUCmkDEVJeEe9bbUEMT5v5vmMymJpehzMa01S54EpwJ4xo6","version":2}} -->
