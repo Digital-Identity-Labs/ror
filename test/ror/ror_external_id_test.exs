@@ -12,6 +12,27 @@ defmodule RorExternalIDTest do
       assert [%ThisModule{} | _] = ThisModule.extract(@example_org_data)
     end
 
+    test "each item contains a type, as an atom" do
+      assert [%ThisModule{type: :fundref} | _] = ThisModule.extract(@example_org_data)
+    end
+
+    test "each item contains a preferred value" do
+      assert [%ThisModule{preferred: "100005595"} | _] = ThisModule.extract(@example_org_data)
+    end
+
+    test "each item contains an all list" do
+      assert [
+               %ThisModule{
+                 all: ["100005595",
+                   "100009350",
+                   "100004802",
+                   "100010574",
+                   "100005188",
+                   "100005192"]
+               } | _
+             ] = ThisModule.extract(@example_org_data)
+    end
+
   end
 
   describe "vocab/0" do

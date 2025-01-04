@@ -9,7 +9,19 @@ defmodule RorRelationshipTest do
   describe "extract/1" do
 
     test "returns a list of %Relationship{} structs when passed organization data" do
-      assert [%ThisModule{} | _ ] = ThisModule.extract(@example_org_data)
+      assert [%ThisModule{} | _] = ThisModule.extract(@example_org_data)
+    end
+
+    test "each item contains a ROR ID" do
+      assert [%ThisModule{id: "https://ror.org/02jbv0t02"} | _] = ThisModule.extract(@example_org_data)
+    end
+
+    test "each item contains a label" do
+      assert [%ThisModule{label: "Lawrence Berkeley National Laboratory"} | _] = ThisModule.extract(@example_org_data)
+    end
+
+    test "each item contains a type" do
+      assert [%ThisModule{type: :related} | _] = ThisModule.extract(@example_org_data)
     end
 
   end

@@ -13,6 +13,54 @@ defmodule RorOrganizationTest do
       assert %ThisModule{} = ThisModule.extract(@example_org_data)
     end
 
+    test "the struct contains an ID" do
+      assert %ThisModule{id: "https://ror.org/00pjdza24"} = ThisModule.extract(@example_org_data)
+    end
+
+    test "the struct contains an established year as a number" do
+      assert %ThisModule{established: 1868} = ThisModule.extract(@example_org_data)
+    end
+
+    test "the struct contains an status atom" do
+      assert %ThisModule{status: :active} = ThisModule.extract(@example_org_data)
+    end
+
+    test "the struct contains a list of types atoms" do
+      assert %ThisModule{types: [:education]} = ThisModule.extract(@example_org_data)
+    end
+
+    test "the struct contains an admin struct" do
+      assert %ThisModule{
+               admin: %ROR.Admin{
+                 created_at: ~D[2020-04-25]
+               }
+             } = ThisModule.extract(@example_org_data)
+    end
+
+    test "the struct contains a list of domain strings" do
+      assert %ThisModule{domains: ["universityofcalifornia.edu"]} = ThisModule.extract(@example_org_data)
+    end
+
+    test "the struct contains a list of ExternalID structs" do
+      assert %ThisModule{external_ids: [%ROR.ExternalID{} | _]} = ThisModule.extract(@example_org_data)
+    end
+
+    test "the struct contains a list of Link structs" do
+      assert %ThisModule{links: [%ROR.Link{} | _]} = ThisModule.extract(@example_org_data)
+    end
+
+    test "the struct contains a list of Location structs" do
+      assert %ThisModule{locations: [%ROR.Location{} | _]} = ThisModule.extract(@example_org_data)
+    end
+
+    test "the struct contains a list of Name structs" do
+      assert %ThisModule{names: [%ROR.Name{} | _]} = ThisModule.extract(@example_org_data)
+    end
+
+    test "the struct contains a list of Relationship structs" do
+      assert %ThisModule{relationships: [%ROR.Relationship{} | _]} = ThisModule.extract(@example_org_data)
+    end
+
   end
 
   describe "id/1" do
@@ -21,7 +69,6 @@ defmodule RorOrganizationTest do
       org = Organization.extract(@example_org_data)
       assert "00pjdza24" = Organization.id(org)
     end
-
 
   end
 

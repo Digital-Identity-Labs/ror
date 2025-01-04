@@ -12,6 +12,17 @@ defmodule RorLinkTest do
       assert [%ThisModule{} | _] = ThisModule.extract(@example_org_data)
     end
 
+    test "each item contains a type atom" do
+      assert [%ThisModule{type: :website}, %ThisModule{type: :wikipedia}] = ThisModule.extract(@example_org_data)
+    end
+
+    test "each item contains a value string" do
+      assert [
+               %ThisModule{value: "http://www.universityofcalifornia.edu/"},
+               %ThisModule{value: "http://en.wikipedia.org/wiki/University_of_California"}
+             ] = ThisModule.extract(@example_org_data)
+    end
+
   end
 
   describe "vocab/0" do

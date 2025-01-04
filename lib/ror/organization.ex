@@ -21,7 +21,7 @@ defmodule ROR.Organization do
                id: binary(),
                admin: Admin.t(),
                domains: list(binary()),
-               established: binary(),
+               established: integer(),
                external_ids: list(ExternalID.t()),
                links: list(Link.t()),
                locations: list(Location.t()),

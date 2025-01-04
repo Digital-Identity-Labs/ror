@@ -16,8 +16,8 @@ defmodule ROR.Location do
                country_name: binary(),
                country_subdivision_code: binary(),
                country_subdivision_name: binary(),
-               latitude: binary(),
-               longitude: binary(),
+               latitude: float(),
+               longitude: float(),
                name: binary()
              }
 

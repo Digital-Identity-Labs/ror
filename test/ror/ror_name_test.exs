@@ -12,6 +12,18 @@ defmodule RorNameTest do
       assert [%ThisModule{} | _] = ThisModule.extract(@example_org_data)
     end
 
+    test "each item contains a value" do
+      assert [%ThisModule{value: "UC"} | _] = ThisModule.extract(@example_org_data)
+    end
+
+    test "each item contains a list of types" do
+      assert [%ThisModule{types: [:acronym]} | _] = ThisModule.extract(@example_org_data)
+    end
+
+    test "each item contains a lang" do
+      assert [%ThisModule{lang: "en"} |_] = ThisModule.extract(@example_org_data)
+    end
+
   end
 
   describe "vocab/0" do

@@ -12,6 +12,34 @@ defmodule RorLocationTest do
       assert [%ThisModule{} | _ ] = ThisModule.extract(@example_org_data)
     end
 
+    test "each item contains a type atom" do
+      assert [%ThisModule{type: :geonames}] = ThisModule.extract(@example_org_data)
+    end
+
+    test "each item contains a geonames id " do
+      assert [%ThisModule{id: 5378538}] = ThisModule.extract(@example_org_data)
+    end
+
+    test "each item contains a name " do
+      assert [%ThisModule{name: "Oakland"}] = ThisModule.extract(@example_org_data)
+    end
+
+    test "each item may contains a country_code" do
+      assert [%ThisModule{country_code: "US"}] = ThisModule.extract(@example_org_data)
+    end
+
+    test "each item may contains a country_name " do
+      assert [%ThisModule{country_name: "United States"}] = ThisModule.extract(@example_org_data)
+    end
+
+    test "each item may contains a latitude" do
+      assert [%ThisModule{latitude: 37.802168}] = ThisModule.extract(@example_org_data)
+    end
+
+    test "each item may contains a  longitude" do
+      assert [%ThisModule{longitude: -122.271281}] = ThisModule.extract(@example_org_data)
+    end
+
   end
 
   describe "vocab/0" do
