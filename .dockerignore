@@ -1,0 +1,8 @@
+Dockerfile
+scratch/
+tmp/
+_build/
+deps/
+doc/
+./*.xml
+.github
