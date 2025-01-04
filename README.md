@@ -6,7 +6,7 @@
 > Registry data is CC0 and openly available via a search interface, REST API, and data dump. Registry updates are curated
 > through a community process and released at least once a month"
 
-Please read ROR's terms of use 
+Please read ROR's [terms of use](https://ror.org/about/terms/) and do not put excessive load on the service. 
 
 [![Hex pm](http://img.shields.io/hexpm/v/ror.svg?style=flat)](https://hex.pm/packages/ror)
 [![API Docs](https://img.shields.io/badge/api-docs-yellow.svg?style=flat)](http://hexdocs.pm/ror/)
@@ -99,6 +99,7 @@ end
 ### ROR Resources
 * [ROR website](https://ror.org)
 * [ROR API Documentation](https://ror.readme.io/v2/docs/basics)
+* [Projects using ROR](https://airtable.com/app2Tnq1uCHnS8HQD/shrM876d6Koi1UONe/tbljRW9VeQOqY6oOg?backgroundColor=gray&viewControls=on)
 
 ## Documentation
 
