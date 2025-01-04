@@ -39,7 +39,11 @@ defmodule RorMatchesTest do
 
     test "returns the chosen match, if there is one" do
       matches = Matches.extract(@example_matches_data)
-      assert %Match{organization: %Organization{id: "https://ror.org/04h699437"}} = Matches.chosen(matches)
+      assert %Match{
+               organization: %Organization{
+                 id: "https://ror.org/04h699437"
+               }
+             } = Matches.chosen(matches)
     end
 
     test "returns nil, if there isn't one" do
@@ -68,6 +72,43 @@ defmodule RorMatchesTest do
   end
 
   describe "Enumeration protocol" do
+
+
+    test "can be counted" do
+      matches = Matches.extract(@example_matches_data)
+      assert 12 = Enum.count(matches)
+    end
+
+    test "can respond to member?" do
+      matches = Matches.extract(@example_matches_data)
+      item = List.first(matches.items)
+      assert Enum.member?(matches, item)
+
+    end
+
+    test "can be sliced" do
+      matches = Matches.extract(@example_matches_data)
+      assert 4 = Enum.slice(matches, 0..3)
+                 |> Enum.count()
+    end
+
+    test "can be iterated" do
+      matches = Matches.extract(@example_matches_data)
+      assert [
+               "https://ror.org/04h699437",
+               "https://ror.org/00kgrkn83",
+               "https://ror.org/02k7v4d05",
+               "https://ror.org/02s6k3f65",
+               "https://ror.org/022fs9h90",
+               "https://ror.org/02fha3693",
+               "https://ror.org/03ad39j10",
+               "https://ror.org/03fc1k060",
+               "https://ror.org/02crff812",
+               "https://ror.org/0323snh42",
+               "https://ror.org/03jkz2y73",
+               "https://ror.org/04s4s0979"
+             ] = Enum.map(matches, fn r -> r.organization.id end)
+    end
 
   end
 
