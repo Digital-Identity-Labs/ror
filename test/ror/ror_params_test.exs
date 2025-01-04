@@ -11,7 +11,12 @@ defmodule RorParamsTest do
   describe "generate/1" do
 
     test "returns an entire set of normal params for get, query, etc as a keyword list, from options" do
-      assert [{:filter, "types:funder"}, {:page, "3"}] = Params.generate(page: 3, filter: [types: "funder"])
+      assert [{:filter, "types:funder"}, {:page, "3"}] = Params.generate(
+               page: 3,
+               filter: [
+                 types: "funder"
+               ]
+             )
     end
 
     test "returns an empty keyword list if not passed any options" do
@@ -23,11 +28,19 @@ defmodule RorParamsTest do
     end
 
     test "does not include page if one is not defined" do
-      assert [{:filter, "types:healthcare"}] = Params.generate(filter: [types: "healthcare"])
+      assert [{:filter, "types:healthcare"}] = Params.generate(
+               filter: [
+                 types: "healthcare"
+               ]
+             )
     end
 
     test "includes filter if one is defined" do
-      assert [{:filter, "types:healthcare"}] = Params.generate(filter: [types: "healthcare"])
+      assert [{:filter, "types:healthcare"}] = Params.generate(
+               filter: [
+                 types: "healthcare"
+               ]
+             )
     end
 
     test "does not include filter if one is not defined" do
@@ -51,10 +64,10 @@ defmodule RorParamsTest do
     end
 
     test "Raises an error if not passed a non-empty string, atom or integer" do
-      assert_raise RuntimeError, fn ->Params.query(nil) end
-      assert_raise RuntimeError, fn ->Params.query("") end
-      assert_raise RuntimeError, fn ->Params.query([]) end
-      assert_raise RuntimeError, fn ->Params.query([page: 4]) end
+      assert_raise RuntimeError, fn -> Params.query(nil) end
+      assert_raise RuntimeError, fn -> Params.query("") end
+      assert_raise RuntimeError, fn -> Params.query([]) end
+      assert_raise RuntimeError, fn -> Params.query([page: 4]) end
     end
 
   end
@@ -70,10 +83,10 @@ defmodule RorParamsTest do
     end
 
     test "Raises an error if not passed a non-empty string, atom or integer" do
-      assert_raise RuntimeError, fn ->Params.query(nil) end
-      assert_raise RuntimeError, fn ->Params.query("") end
-      assert_raise RuntimeError, fn ->Params.query([]) end
-      assert_raise RuntimeError, fn ->Params.query([page: 4]) end
+      assert_raise RuntimeError, fn -> Params.query(nil) end
+      assert_raise RuntimeError, fn -> Params.query("") end
+      assert_raise RuntimeError, fn -> Params.query([]) end
+      assert_raise RuntimeError, fn -> Params.query([page: 4]) end
     end
 
   end
@@ -112,6 +125,22 @@ defmodule RorParamsTest do
 
     test "if :client_id option has not been set, returns empty headers list" do
       assert [] = Params.headers([])
+    end
+
+  end
+
+  describe "filter/1" do
+
+    test "accepts a keyword list and returns a filter string" do
+      assert "types:funder" = Params.filter(types: "funder")
+    end
+
+    test "accepts a map and returns a filter string" do
+      assert "types:funder" = Params.filter(%{types: "funder"})
+    end
+
+    test "accepts a Filter struct and returns a string" do
+      assert "types:funder" = Params.filter(%Filter{types: "funder"})
     end
 
   end

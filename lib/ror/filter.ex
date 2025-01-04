@@ -31,7 +31,7 @@ defmodule ROR.Filter do
   @doc """
   XX
   """
-  @spec new(input :: Filter.t() | keyword()) :: Filter.t()
+  @spec new(input :: Filter.t() | keyword() | map()) :: Filter.t()
   def new(filter \\ [])
   def new(%Filter{} = filter) do
     filter

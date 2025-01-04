@@ -8,8 +8,7 @@ defmodule ROR.Params do
   @spec generate(opts :: keyword()) :: keyword()
   def generate(opts) do
 
-    filter = Filter.new(opts[:filter])
-             |> Filter.to_ror_param()
+    filter = filter(opts[:filter])
 
     page = page(opts[:page])
 
@@ -89,6 +88,12 @@ defmodule ROR.Params do
     else
       []
     end
+  end
+
+  @spec query(value :: binary() | keyword() | map() | Filter.t()) :: binary()
+  def filter(filter) do
+    Filter.new(filter)
+    |> Filter.to_ror_param()
   end
 
 end
