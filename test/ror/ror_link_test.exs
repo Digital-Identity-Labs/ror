@@ -9,7 +9,7 @@ defmodule RorLinkTest do
   describe "extract/1" do
 
     test "returns a list of %Link{} structs when passed organization data" do
-      assert [%ThisModule{} | _ ] = ThisModule.extract(@example_org_data)
+      assert [%ThisModule{} | _] = ThisModule.extract(@example_org_data)
     end
 
   end
@@ -18,6 +18,17 @@ defmodule RorLinkTest do
 
     test "returns an array contains key vocabulary/values, as atoms" do
       assert [] = ThisModule.vocab()
+    end
+
+  end
+
+  describe "String.Chars Protocol" do
+
+    test "returns a simple string representation when interpolated or otherwise converted to a string" do
+      assert [
+               "http://www.universityofcalifornia.edu/",
+               "http://en.wikipedia.org/wiki/University_of_California"
+             ] = Enum.map(ThisModule.extract(@example_org_data), &to_string/1)
     end
 
   end

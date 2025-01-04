@@ -31,4 +31,12 @@ defmodule RorAdminTest do
 
   end
 
+  describe "String.Chars Protocol" do
+
+    test "returns a simple string representation when interpolated or otherwise converted to a string" do
+      assert "2020-04-25, 2022-10-18" = to_string(ThisModule.extract(@example_org_data))
+    end
+
+  end
+
 end

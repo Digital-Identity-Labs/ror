@@ -9,7 +9,7 @@ defmodule RorNameTest do
   describe "extract/1" do
 
     test "returns a list of %Name{} structs when passed organization data" do
-      assert [%ThisModule{} | _ ] = ThisModule.extract(@example_org_data)
+      assert [%ThisModule{} | _] = ThisModule.extract(@example_org_data)
     end
 
   end
@@ -18,6 +18,17 @@ defmodule RorNameTest do
 
     test "returns an array contains key vocabulary/values, as atoms" do
       assert [:acronym, :alias, :label, :ror_display] = ThisModule.vocab()
+    end
+
+  end
+
+  describe "String.Chars Protocol" do
+
+    test "returns a simple string representation when interpolated or otherwise converted to a string" do
+      assert ["UC", "UC System", "University of California System", "Université de Californie"] = Enum.map(
+               ThisModule.extract(@example_org_data),
+               &to_string/1
+             )
     end
 
   end

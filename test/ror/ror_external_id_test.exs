@@ -9,7 +9,7 @@ defmodule RorExternalIDTest do
   describe "extract/1" do
 
     test "returns a list of %ExternalID{} when passed organization data" do
-      assert [%ThisModule{} | _ ] = ThisModule.extract(@example_org_data)
+      assert [%ThisModule{} | _] = ThisModule.extract(@example_org_data)
     end
 
   end
@@ -18,6 +18,17 @@ defmodule RorExternalIDTest do
 
     test "returns an array contains key vocabulary/values, as atoms" do
       assert [:fundref, :grid, :isni, :wikidata] = ThisModule.vocab()
+    end
+
+  end
+
+  describe "String.Chars Protocol" do
+
+    test "returns a simple string representation when interpolated or otherwise converted to a string" do
+      assert ["100005595", "grid.30389.31", "0000 0001 2348 0690"] = Enum.map(
+               ThisModule.extract(@example_org_data),
+               &to_string/1
+             )
     end
 
   end

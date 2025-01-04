@@ -22,4 +22,12 @@ defmodule RorLocationTest do
 
   end
 
+  describe "String.Chars Protocol" do
+
+    test "returns a simple string representation when interpolated or otherwise converted to a string" do
+      assert ["Oakland"] = Enum.map(ThisModule.extract(@example_org_data), &to_string/1)
+    end
+
+  end
+
 end

@@ -22,4 +22,27 @@ defmodule RorRelationshipTest do
 
   end
 
+  describe "String.Chars Protocol" do
+
+    test "returns a simple string representation when interpolated or otherwise converted to a string" do
+      assert [
+               "https://ror.org/02jbv0t02",
+               "https://ror.org/03yrm5c26",
+               "https://ror.org/00zv0wd17",
+               "https://ror.org/03t0t6y08",
+               "https://ror.org/01an7q238",
+               "https://ror.org/05rrcem69",
+               "https://ror.org/04gyf1771",
+               "https://ror.org/046rm7j60",
+               "https://ror.org/00d9ah105",
+               "https://ror.org/03nawhv43",
+               "https://ror.org/0168r3w48",
+               "https://ror.org/043mz5j54",
+               "https://ror.org/02t274463",
+               "https://ror.org/03s65by71"
+             ] = Enum.map(ThisModule.extract(@example_org_data), &to_string/1)
+    end
+
+  end
+
 end

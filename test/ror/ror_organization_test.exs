@@ -42,4 +42,12 @@ defmodule RorOrganizationTest do
 
   end
 
+  describe "String.Chars Protocol" do
+
+    test "returns a simple string representation when interpolated or otherwise converted to a string" do
+      assert "https://ror.org/00pjdza24" = to_string(ThisModule.extract(@example_org_data))
+    end
+
+  end
+
 end
