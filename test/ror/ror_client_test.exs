@@ -260,6 +260,31 @@ defmodule RorClientTest do
              } = Client.http()
     end
 
+    test "Req.Request struct sets the base URL to the value in :base_url" do
+      assert %Req.Request{
+               options: %{
+                 base_url: "https://api.ror.org/v2/organizations2"
+               }
+             } = Client.http(http: [base_url: "https://api.ror.org/v2/organizations2"])
+    end
+
+  end
+
+  describe "base_url/1" do
+
+    test "if opts includes an :api_url value, then return that" do
+      assert "https://example.com/api/" = Client.base_url([api_url: "https://example.com/api/"])
+    end
+
+    test "if :api_url has not been set, and the :http opts already contain the :base_url, use that as expected" do
+      assert "https://example.com/api2/" = Client.base_url([http: [base_url: "https://example.com/api2/"]])
+      assert "https://api.ror.org/v2/organizations" = Client.base_url([http: [base_url: "https://api.ror.org/v2/organizations"]])
+    end
+
+    test "if something weird has happened and the :http opts lack a :base_url, use the hardcoded default one" do
+      assert "https://api.ror.org/v2/organizations" = Client.base_url([])
+    end
+
   end
 
 end

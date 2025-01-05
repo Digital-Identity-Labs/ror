@@ -14,7 +14,7 @@ defmodule ROR.Client do
     max_retries: 3
   ]
 
-  @common_options [http: @default_http_options, params: [], headers: [], api_url: @default_url]
+  @common_options [http: @default_http_options, params: [], headers: [], api_url: nil]
 
   @default_get_options  @common_options ++ []
   @allowed_get_options  Keyword.keys(@default_get_options)
@@ -38,7 +38,7 @@ defmodule ROR.Client do
     opts = Keyword.merge(@default_get_options, (opts || []))
            |> Keyword.take(@allowed_get_options)
 
-    Req.get!(http(opts[:http]), url: ID.path(id), headers: opts[:headers]).body
+    Req.get!(http(opts), url: ID.path(id), headers: opts[:headers]).body
   end
 
   @doc """
@@ -49,7 +49,7 @@ defmodule ROR.Client do
     opts = Keyword.merge(@default_list_options, (opts || []))
            |> Keyword.take(@allowed_list_options)
 
-    Req.get!(http(opts[:http]), params: opts[:params], headers: opts[:headers]).body
+    Req.get!(http(opts), params: opts[:params], headers: opts[:headers]).body
   end
 
   @doc """
@@ -64,7 +64,7 @@ defmodule ROR.Client do
 
     params = Keyword.merge(opts[:params], [query: value])
 
-    Req.get!(http(opts[:http]), params: params, headers: opts[:headers]).body
+    Req.get!(http(opts), params: params, headers: opts[:headers]).body
   end
 
   @doc """
@@ -79,7 +79,7 @@ defmodule ROR.Client do
 
     params = Keyword.merge(opts[:params], ["query.advanced": value])
 
-    Req.get!(http(opts[:http]), params: params, headers: opts[:headers]).body
+    Req.get!(http(opts), params: params, headers: opts[:headers]).body
   end
 
   @doc """
@@ -97,14 +97,14 @@ defmodule ROR.Client do
     if params[:filter], do: raise "Cannot pass a filter to this API function"
     if params[:page], do: raise "Cannot pass a page to this API function"
 
-    Req.get!(http(opts[:http]), params: params, headers: opts[:headers]).body
+    Req.get!(http(opts), params: params, headers: opts[:headers]).body
   end
 
   @doc false
   @spec http(opts :: keyword()) :: map()
   def http(opts \\ []) do
-    Keyword.merge(@default_http_options, (opts || []))
-    |> Keyword.merge([user_agent: http_agent_name()])
+    Keyword.merge(@default_http_options, Keyword.get(opts, :http, []))
+    |> Keyword.merge([user_agent: http_agent_name(), base_url: base_url(opts)])
     |> Req.new()
     |> CurlReq.Plugin.attach()
   end
@@ -113,6 +113,16 @@ defmodule ROR.Client do
   @spec http_agent_name() :: binary()
   def http_agent_name do
     "Elixir ROR Client #{Application.spec(:ror, :vsn)}"
+  end
+
+  @doc false
+  @spec base_url(opts :: keyword()) :: binary()
+  def base_url(opts) do
+    cond do
+      opts[:api_url] -> opts[:api_url]
+      opts[:http] && opts[:http][:base_url] -> opts[:http][:base_url]
+      true -> @default_url
+    end
   end
 
   ######################################################################################

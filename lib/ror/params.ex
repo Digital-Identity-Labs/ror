@@ -79,7 +79,7 @@ defmodule ROR.Params do
     "#{value}"
   end
 
-  @spec headers(opts :: keyword() ) :: keyword()
+  @spec headers(opts :: keyword()) :: keyword()
   def headers(opts) do
     if opts[:client_id] do
       [
@@ -94,6 +94,15 @@ defmodule ROR.Params do
   def filter(filter) do
     Filter.new(filter)
     |> Filter.to_ror_param()
+  end
+
+  @spec api_url(opts :: keyword()) :: binary() | nil
+  def api_url(opts) do
+    if opts[:api_url] do
+      opts[:api_url]
+    else
+      nil
+    end
   end
 
 end

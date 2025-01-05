@@ -145,4 +145,17 @@ defmodule RorParamsTest do
 
   end
 
+  describe "api_url/1" do
+
+    test "returns the value of api_url key if one is set" do
+      assert "https://example.com/organizations" = Params.api_url([api_url: "https://example.com/organizations"])
+    end
+
+    test "otherwise returns nil" do
+      assert is_nil(Params.api_url([api_url: nil]))
+      assert is_nil(Params.api_url([]))
+    end
+
+  end
+
 end
