@@ -1,8 +1,8 @@
 defmodule ROR do
 
   @moduledoc """
-  `ROR` is an unofficial client for the [Research Organization Registry (ROR)](https://ror.org) API for Elixir, Erlang or
-  any other BEAM language. This top level `ROR` module contains functions for retrieving data from the API.
+  `ROR` is an unofficial client for the [Research Organization Registry (ROR)](https://ror.org) API for Elixir.
+  This top level `ROR` module contains functions for retrieving data via the API.
 
   > The Research Organization Registry (ROR) includes IDs and metadata for more than 110,000 organizations and counting.
   > Registry data is CC0 and openly available via a search interface, REST API, and data dump. Registry updates are curated
@@ -14,10 +14,11 @@ defmodule ROR do
 
   * Lookup individual ROR records by ID
   * Search and Quick Search based on names or record attributes
-  * Paging and filters are supported
+  * Paging and filters for queries and lists
   * Match text to records, possibly identifying an organisation from existing data
-  * Records are returned as typed structs (slight different to the ROR JSON responses, but containing all the information)
+  * Records are returned as typed structs (slightly different to the ROR JSON responses, but containing all the information)
   * Client ID authentication is supported and optional
+  * API service heartbeat checks
   * (This is an early version and only contains the basics so far)
 
    You may not need to use the other ROR modules directly at all, but here are a few that might be handy:
@@ -29,11 +30,74 @@ defmodule ROR do
 
   ## Defining Filters
 
+  Filters are used to fine-tune results before they are returned.
+
+  > Results can be filtered by record status, organization type, ISO 3166 country code, country name, continent code, and continent name.
+
+  In the `ROR` module they are defined directly using either a keyword list
+
+  ```elixir
+  iex> ROR.list!(filter: [type: :government])
+  ```
+
+  or by creating a `ROR.Filter` struct, and passing that
+
+  ```elixir
+  iex> my_filter = ROR.Filter.new(status: :inactive, types: :facility)
+  iex> ROR.list!(filter: my_filter)
+  ```
+
+  You can read more about filters in the [official ROR docs](https://ror.readme.io/v2/docs/api-filtering)
+
   ## Authentication
 
-  ## Pages
+  The ROR API does not require authentication, but it can be used to permit heavier usage. You must register on the ROR
+  website for a key/token, and then include that in calls using the `:client_id` option like this:
+
+  ```elixir
+  iex> ROR.get!("https://ror.org/04h699437", client_id: "client ID goes here")
+  ```
+
+  ## Paging
+
+  API calls that return multiple results will limit them to pages of 20 organizations at a time, and default to page 1.
+
+  You can specify pages using the `:page` option.
+
+  ```elixir
+  iex> ROR.list!(page: 20)
+  ```
+
+  You can read more about paging in the [official ROR docs](https://ror.readme.io/v2/docs/api-paging)
 
   ## Results and Matches
+
+  Results are returned as `ROR.Results` and `ROR.Matches` structs which contain a list of `ROR.Organization` structs
+  and some metadata. They are enumerable, so you can use `Enum` functions on them directly.
+
+  So, iterating through the items in the Results struct and iterating directly are equivalent
+
+  ```elixir
+  iex> results = ROR.list!()
+  iex> Enum.map(results.items, fn o -> o.id end)  # this
+  iex> Enum.map(results, fn o -> o.id end)        # can also be done like this
+  ```
+
+  ## Stringifying ROR structs
+
+  Many structs used by the ROR library can be converted to strings, and converted automatically if interpolated inside
+  other strings. This can be useful when logging and debugging.
+
+  Information will be lost, and the process is one-way - you cannot convert them back to structs from strings.
+
+  ```elixir
+  iex> org = ROR.get!("https://ror.org/04h699437")
+  iex> to_string(org)
+  "https://ror.org/04h699437"
+  iex> org = ROR.get!("https://ror.org/04h699437")
+  iex> to_string(org.admin)
+  "2018-11-14, 2024-12-11"
+  ```
 
   ## Examples
 
@@ -59,8 +123,8 @@ defmodule ROR do
 
   ```elixir
   iex> a = ROR.quick_search!("University of Manchester")
-  iex> |> Enum.take(1)
-  iex> |> List.first()
+  iex>     |> Enum.take(1)
+  iex>     |> List.first()
   iex> a.established
   1824
 
@@ -84,19 +148,19 @@ defmodule ROR do
   alias ROR.ID
 
   @doc """
-  Retrieve a single Organization record using its ROR ID.
+  Check if a single, specified record is available via the API, returning true or false.
 
   The ID can be any valid format: `https://ror.org/04h699437`, `ror.org/04h699437` or `04h699437`
 
-  An exception will be raised if an Organization cannot be returned
+  False will be returned if the ID is invalid, or the URL incorrect, or the record simply isn't available.
 
   ## Options
     * `api_url`: The base URL (optional)
     * `client_id`: ROR authentication token (optional)
 
   ## Example
-      iex> ROR.get!("https://ror.org/04h699437")
-
+      iex> ROR.exists?("https://ror.org/04h699437")
+      true
   """
   @spec exists?(id :: binary(), opts :: keyword()) :: map()
   def exists?(id, opts \\ []) do
@@ -108,13 +172,14 @@ defmodule ROR do
     end
   end
 
-
   @doc """
   Retrieve a single Organization record using its ROR ID.
 
   The ID can be any valid format: `https://ror.org/04h699437`, `ror.org/04h699437` or `04h699437`
 
   An exception will be raised if an Organization cannot be returned
+
+  You can read more about getting a single record in the [official ROR docs](https://ror.readme.io/v2/docs/api-single)
 
   ## Options
     * `api_url`: The base URL (optional)
@@ -134,6 +199,8 @@ defmodule ROR do
   Returns a Results struct that contains Organization structs.
 
   An exception will be raised if a list of organizations data cannot be returned
+
+  You can read more about getting a list of records in the [official ROR docs](https://ror.readme.io/v2/docs/api-list)
 
   ## Options
     * `api_url`: The base URL (optional)
@@ -158,6 +225,8 @@ defmodule ROR do
   This style of search is relatively quick and simple, and suitable for things like auto-suggestion lookups.
 
   An exception will be raised if results cannot be returned
+
+  You can read more about querying records in the [official ROR docs](https://ror.readme.io/v2/docs/api-query)
 
   ## Options
     * `api_url`: The base URL (optional)
@@ -188,6 +257,8 @@ defmodule ROR do
   This API call is slower and more resource-intensive than `quick_search/2` but allows more precision.
 
   An exception will be raised if results cannot be returned.
+
+  You can read more about advanced queries in the [official ROR docs](https://ror.readme.io/v2/docs/api-advanced-query)
 
   ## Options
     * `api_url`: The base URL (optional)
@@ -223,6 +294,8 @@ defmodule ROR do
 
   An exception will be raised if matches cannot be returned.
 
+  You can read more about affiliation queries in the [official ROR docs](https://ror.readme.io/v2/docs/api-affiliation)
+
   ## Options
     * `api_url`: The base URL (optional)
     * `client_id`: ROR authentication token (optional)
@@ -242,7 +315,7 @@ defmodule ROR do
   end
 
   @doc """
-  Attempts to identify **one** organizations that has been chosen as a close match for the string, or returns nil if there
+  Attempts to identify **one** organization that has been chosen as a close match for the string, or returns nil if there
     is any ambiguity.
 
   Results cannot be paged or filtered.
