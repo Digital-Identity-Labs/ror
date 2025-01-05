@@ -1,13 +1,23 @@
 defmodule ROR.ID do
 
   @moduledoc """
-  XX
+  Functions for extracting and using Admin data from a ROR Organization record
+
   """
 
   @id_regex ~r/^0[a-hj-km-np-tv-z|0-9]{6}[0-9]{2}$/
 
   @doc """
-  XX
+  Extracts a XXX struct from the decoded JSON of a ROR Organization record
+
+  If you are retrieving records via the `ROR` module and the REST API you will not need to use this function yourself.
+
+  ## Example
+
+  iex> record = File.read!("test/support/static/example_org.json") |> Jason.decode!()
+  iex> ROR.Admin.extract(record)
+  %ROR.XXX{}
+
   """
   @spec extract(data :: map()) :: binary()
   def extract(data) do

@@ -38,8 +38,8 @@ defmodule Ror.MixProject do
       {:dialyxir, "~> 1.4", only: [:dev], runtime: false},
       {:doctor, "~> 0.21", only: :dev, runtime: false},
       {:ex_json_schema, "~> 0.10.2", only: :test, runtime: false},
-      {:observer_cli, "~> 1.7"}
-
+      {:observer_cli, "~> 1.7"},
+      {:doctest_formatter, "~> 0.3.1", only: [:dev, :test], runtime: false}
 
     ]
   end

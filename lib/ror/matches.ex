@@ -1,7 +1,8 @@
 defmodule ROR.Matches do
 
   @moduledoc """
-  XX
+  A structure for storing organization match results from Identify/Affiliation searches
+
   """
 
   #@enforce_keys [:id]

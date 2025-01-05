@@ -1,7 +1,8 @@
 defmodule ROR.Results do
 
   @moduledoc """
-  XX
+  A structure and tools for search and list results
+
   """
 
   alias __MODULE__

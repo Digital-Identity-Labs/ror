@@ -1,7 +1,9 @@
 defmodule ROR.Match do
 
   @moduledoc """
-  XX
+  Functions for extracting and using Admin data from a ROR Organization record
+
+
   """
 
   @enforce_keys [:organization]

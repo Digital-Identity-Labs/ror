@@ -1,7 +1,9 @@
 defmodule ROR.Client do
 
   @moduledoc """
-  XX
+  Low-level functions for calling the ROR REST API, returning maps parsed from the API's JSON responses.
+
+
   """
 
   @default_url "https://api.ror.org/v2/organizations"

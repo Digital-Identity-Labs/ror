@@ -1,7 +1,8 @@
 defmodule ROR.Filter do
 
   @moduledoc """
-  XX
+  A structure for building simple ROR Filter strings
+
   """
 
   #@enforce_keys [:id]
