@@ -315,4 +315,21 @@ defmodule RorTest do
 
   end
 
+  describe "api_versions/0" do
+    test "returns a list of supported API versions" do
+      assert  ["v2.1"] = ROR.api_versions()
+    end
+  end
+
+  describe "heartbeat?/1" do
+    test "returns true if the API is available" do
+      assert ROR.heartbeat?()
+    end
+
+    test "returns false if the API is not available" do
+      refute ROR.heartbeat?(api_url: "https://incorrect.example.com/organizations")
+    end
+
+  end
+
 end

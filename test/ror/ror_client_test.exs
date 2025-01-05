@@ -287,4 +287,15 @@ defmodule RorClientTest do
 
   end
 
+  describe "heartbeat!/1" do
+    test "returns 'OK' if the API is available" do
+      assert "OK" = Client.heartbeat!()
+    end
+
+    test "raises an exception if something goes wrong" do
+      assert_raise Req.TransportError, fn -> Client.heartbeat!(api_url: "https://incorrect.example.com/organizations") end
+    end
+
+  end
+
 end

@@ -1,12 +1,13 @@
 # ROR
 
-`ROR` is an unofficial client for the [Research Organization Registry (ROR)](https://ror.org) API with Elixir, Erlang or any other BEAM language.
+`ROR` is an unofficial client for the [Research Organization Registry (ROR)](https://ror.org) API for Elixir, Erlang or 
+any other BEAM language.
 
 > The Research Organization Registry (ROR) includes IDs and metadata for more than 110,000 organizations and counting.
 > Registry data is CC0 and openly available via a search interface, REST API, and data dump. Registry updates are curated
-> through a community process and released at least once a month"
+> through a community process and released at least once a month
 
-Please read ROR's [terms of use](https://ror.org/about/terms/) and do not put excessive load on the service. 
+Please read ROR's [terms of use](https://ror.org/about/terms/) and do not put excessive load on their API service. 
 
 [![Hex pm](http://img.shields.io/hexpm/v/ror.svg?style=flat)](https://hex.pm/packages/ror)
 [![API Docs](https://img.shields.io/badge/api-docs-yellow.svg?style=flat)](http://hexdocs.pm/ror/)

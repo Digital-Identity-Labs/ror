@@ -5,6 +5,7 @@ defmodule ROR.Client do
   """
 
   @default_url "https://api.ror.org/v2/organizations"
+  @default_heartbeat_url "https://api.ror.org/heartbeat"
 
   @default_http_options [
     base_url: @default_url,
@@ -123,6 +124,26 @@ defmodule ROR.Client do
       opts[:http] && opts[:http][:base_url] -> opts[:http][:base_url]
       true -> @default_url
     end
+  end
+
+  @doc false
+  @spec heartbeat_url(opts :: keyword()) :: binary()
+  def heartbeat_url(opts) do
+    if opts[:api_url] do
+      base_url(opts)
+      |> URI.parse()
+      |> URI.merge("/heartbeat")
+    else
+      @default_heartbeat_url
+    end
+  end
+
+  @doc false
+  @spec heartbeat!(opts :: keyword) :: boolean()
+  def heartbeat!(opts \\ []) do
+    opts = Keyword.merge(@default_get_options, (opts || []))
+           |> Keyword.take(@allowed_get_options)
+    Req.get!(http(opts), base_url: heartbeat_url(opts), headers: opts[:headers]).body
   end
 
   ######################################################################################
