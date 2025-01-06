@@ -1,39 +1,54 @@
 defmodule ROR.Filter do
-
   @moduledoc """
   A structure for building simple ROR Filter strings
 
   """
 
-  #@enforce_keys [:id]
+  # @enforce_keys [:id]
   alias __MODULE__
   alias ROR.Status
   alias ROR.Type
 
   @type t :: %__MODULE__{
-               status: binary() | atom(),
-               types: binary() | atom(),
-               country_code: binary() | atom(),
-               country_name: binary() | atom(),
-               continent_code: binary() | atom(),
-               continent_name: binary() | atom()
-             }
+          status: binary() | atom(),
+          types: binary() | atom(),
+          country_code: binary() | atom(),
+          country_name: binary() | atom(),
+          continent_code: binary() | atom(),
+          continent_name: binary() | atom()
+        }
 
-
-  defstruct [
-    status: nil,
-    types: nil,
-    country_code: nil,
-    country_name: nil,
-    continent_code: nil,
-    continent_name: nil
-  ]
+  defstruct status: nil,
+            types: nil,
+            country_code: nil,
+            country_name: nil,
+            continent_code: nil,
+            continent_name: nil
 
   @doc """
-  XX
+  Creates a new Filter struct from a map or keyword list.
+
+  Keys that can be passed are: `:status`, `:types`, `:country_code`, `:country_name`, `:continent_code`, `:continent_name`
+    and also `:type`, which is corrected to `:types`.
+
+  Passing an existing Filter struct returns the same struct
+
+  ## Example
+
+      iex> ROR.Filter.new(types: "funder", country_code: "DE")
+      %ROR.Filter{
+        status: nil,
+        types: "funder",
+        country_code: "DE",
+        country_name: nil,
+        continent_code: nil,
+        continent_name: nil
+      }
+
   """
   @spec new(input :: Filter.t() | keyword() | map()) :: Filter.t()
   def new(filter \\ [])
+
   def new(%Filter{} = filter) do
     filter
   end
@@ -45,25 +60,30 @@ defmodule ROR.Filter do
       country_code: filter_opts[:country_code],
       country_name: filter_opts[:country_name],
       continent_code: filter_opts[:continent_code],
-      continent_name: filter_opts[:continent_name],
+      continent_name: filter_opts[:continent_name]
     }
     |> validate!()
   end
 
   @doc """
-  XX
+  Converts a Filter struct to a ROR filter string
+
+  ## Example
+
+      iex> ROR.Filter.new(types: "funder", country_code: "DE")
+      iex> |> ROR.Filter.to_ror_param()
+      "types:funder,locations.geonames_details.country_code:DE"
+
   """
   @spec to_ror_param(filter :: Filter.t() | keyword()) :: nil | binary()
-  def to_ror_param(
-        %Filter{
-          status: nil,
-          types: nil,
-          country_code: nil,
-          country_name: nil,
-          continent_code: nil,
-          continent_name: nil
-        }
-      ) do
+  def to_ror_param(%Filter{
+        status: nil,
+        types: nil,
+        country_code: nil,
+        country_name: nil,
+        continent_code: nil,
+        continent_name: nil
+      }) do
     nil
   end
 
@@ -80,9 +100,11 @@ defmodule ROR.Filter do
   @spec validate!(filter :: Filter.t() | keyword()) :: Filter.t()
   defp validate!(filter) do
     if !is_nil(filter.status) && String.to_atom("#{filter.status}") not in Status.vocab(),
-       do: raise "Invalid Filter status '#{filter.status}'"
+      do: raise("Invalid Filter status '#{filter.status}'")
+
     if !is_nil(filter.types) && String.to_atom("#{filter.types}") not in Type.vocab(),
-       do: raise "Invalid Filter type '#{filter.types}'"
+      do: raise("Invalid Filter type '#{filter.types}'")
+
     filter
   end
 
@@ -118,5 +140,4 @@ defmodule ROR.Filter do
   defp filterize(key, value) do
     "#{key}:#{value}"
   end
-
 end

@@ -1,5 +1,4 @@
 defmodule ROR.Utils do
-
   @moduledoc false
 
   @elastic_special [
@@ -35,5 +34,4 @@ defmodule ROR.Utils do
       String.replace(elastic_string, @elastic_special, fn m -> "\\" <> m end)
     end
   end
-
 end

@@ -1,37 +1,41 @@
 defmodule ROR.Name do
-
   @moduledoc """
-  Functions for extracting and using Admin data from a ROR Organization record
-
+  Functions for extracting and using Name data from a ROR Organization record
 
   """
 
-  #@enforce_keys [:id]
+  # @enforce_keys [:id]
   alias __MODULE__
 
   @type t :: %__MODULE__{
-               lang: boolean(),
-               types: list(atom()),
-               value: binary(),
-             }
+          lang: boolean(),
+          types: list(atom()),
+          value: binary()
+        }
 
-
-  defstruct [
-    lang: nil,
-    types: nil,
-    value: nil,
-  ]
+  defstruct lang: nil,
+            types: nil,
+            value: nil
 
   @doc """
-  Extracts a XXX struct from the decoded JSON of a ROR Organization record
+  Extracts a list of Name structs from the decoded JSON of a ROR Organization record
 
   If you are retrieving records via the `ROR` module and the REST API you will not need to use this function yourself.
 
   ## Example
 
-  iex> record = File.read!("test/support/static/example_org.json") |> Jason.decode!()
-  iex> ROR.Admin.extract(record)
-  %ROR.XXX{}
+      iex> record = File.read!("test/support/static/example_org.json") |> Jason.decode!()
+      ...> ROR.Name.extract(record)
+      [
+      %ROR.Name{lang: "en", types: [:acronym], value: "UC"},
+      %ROR.Name{lang: "en", types: [:alias], value: "UC System"},
+      %ROR.Name{
+        lang: "en",
+        types: [:ror_display, :label],
+        value: "University of California System"
+      },
+      %ROR.Name{lang: "fr", types: [:label], value: "Université de Californie"}
+      ]
 
   """
   @spec extract(data :: map()) :: list(Name.t())
@@ -40,7 +44,7 @@ defmodule ROR.Name do
       %Name{
         lang: d["lang"],
         types: Enum.map(d["types"], fn t -> String.to_atom(t) end),
-        value: d["value"],
+        value: d["value"]
       }
     end
   end
@@ -52,5 +56,4 @@ defmodule ROR.Name do
   def vocab do
     [:acronym, :alias, :label, :ror_display]
   end
-
 end

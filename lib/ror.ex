@@ -277,7 +277,7 @@ defmodule ROR do
   Attempts to find organizations that match the provided string, with levels of confidence that an organization has
    been identified. Returns a Matches struct, which contains a list of Match records, each with an Organization.
 
-  This API call is potentially useful for find the correct ROR organization record for existing data, but must be used
+  This API call is potentially useful for finding the correct ROR organization record for existing data, but must be used
     carefully.
 
   Results cannot be paged or filtered.

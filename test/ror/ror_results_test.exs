@@ -1,7 +1,7 @@
 defmodule RorResultsTest do
   use ExUnit.Case
 
-  @example_results_json File.read! "test/support/static/example_results.json"
+  @example_results_json File.read!("test/support/static/example_results.json")
   @example_results_data Jason.decode!(@example_results_json)
 
   alias ROR.Results, as: ThisModule
@@ -9,20 +9,16 @@ defmodule RorResultsTest do
   alias ROR.Organization
 
   describe "extract/1" do
-
     test "returns an array of %Match{} structs when passed matches data" do
       assert %Results{} = ThisModule.extract(@example_results_data)
     end
-
   end
 
   describe "organizations/1" do
-
     test "returns a list of Organization records when passed a Results record" do
       results = Results.extract(@example_results_data)
       assert [%Organization{} | _] = Results.organizations(results)
     end
-
   end
 
   describe "orgs/1" do
@@ -33,23 +29,20 @@ defmodule RorResultsTest do
   end
 
   describe "time_taken/1" do
-
     test "returns the time taken" do
       results = Results.extract(@example_results_data)
       assert is_integer(Results.time_taken(results))
     end
-
   end
 
   describe "number_of_results/1" do
     test "returns the time taken" do
       results = Results.extract(@example_results_data)
-      assert 109806 = Results.number_of_results(results)
+      assert 109_806 = Results.number_of_results(results)
     end
   end
 
   describe "Enumeration protocol" do
-
     test "can be counted" do
       results = Results.extract(@example_results_data)
       assert 20 = Enum.count(results)
@@ -59,7 +52,6 @@ defmodule RorResultsTest do
       results = Results.extract(@example_results_data)
       item = List.first(results.items)
       assert Enum.member?(results, item)
-
     end
 
     test "can be sliced" do
@@ -69,6 +61,7 @@ defmodule RorResultsTest do
 
     test "can be iterated" do
       results = Results.extract(@example_results_data)
+
       assert [
                "https://ror.org/04ttjf776",
                "https://ror.org/01rxfrp27",
@@ -92,8 +85,5 @@ defmodule RorResultsTest do
                "https://ror.org/03kwrfk72"
              ] = Enum.map(results, fn r -> r.id end)
     end
-
   end
-
-
 end

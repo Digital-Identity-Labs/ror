@@ -1,7 +1,7 @@
 defmodule RorParamsTest do
   use ExUnit.Case
 
-  @example_org_json File.read! "test/support/static/example_org.json"
+  @example_org_json File.read!("test/support/static/example_org.json")
   @example_org_data Jason.decode!(@example_org_json)
 
   alias ROR.Params, as: ThisModule
@@ -9,14 +9,14 @@ defmodule RorParamsTest do
   alias ROR.Filter
 
   describe "generate/1" do
-
     test "returns an entire set of normal params for get, query, etc as a keyword list, from options" do
-      assert [{:filter, "types:funder"}, {:page, "3"}] = Params.generate(
-               page: 3,
-               filter: [
-                 types: "funder"
-               ]
-             )
+      assert [{:filter, "types:funder"}, {:page, "3"}] =
+               Params.generate(
+                 page: 3,
+                 filter: [
+                   types: "funder"
+                 ]
+               )
     end
 
     test "returns an empty keyword list if not passed any options" do
@@ -28,19 +28,21 @@ defmodule RorParamsTest do
     end
 
     test "does not include page if one is not defined" do
-      assert [{:filter, "types:healthcare"}] = Params.generate(
-               filter: [
-                 types: "healthcare"
-               ]
-             )
+      assert [{:filter, "types:healthcare"}] =
+               Params.generate(
+                 filter: [
+                   types: "healthcare"
+                 ]
+               )
     end
 
     test "includes filter if one is defined" do
-      assert [{:filter, "types:healthcare"}] = Params.generate(
-               filter: [
-                 types: "healthcare"
-               ]
-             )
+      assert [{:filter, "types:healthcare"}] =
+               Params.generate(
+                 filter: [
+                   types: "healthcare"
+                 ]
+               )
     end
 
     test "does not include filter if one is not defined" do
@@ -50,11 +52,9 @@ defmodule RorParamsTest do
     test "includes all_status only if defined" do
       assert [{all_status, true}] = Params.generate(all_status: true)
     end
-
   end
 
   describe "query/1" do
-
     test "returns an escaped simple query string" do
       assert "This \\&& That" = Params.query("This && That")
     end
@@ -67,13 +67,11 @@ defmodule RorParamsTest do
       assert_raise RuntimeError, fn -> Params.query(nil) end
       assert_raise RuntimeError, fn -> Params.query("") end
       assert_raise RuntimeError, fn -> Params.query([]) end
-      assert_raise RuntimeError, fn -> Params.query([page: 4]) end
+      assert_raise RuntimeError, fn -> Params.query(page: 4) end
     end
-
   end
 
   describe "advanced_query/1" do
-
     test "returns an escaped Elastic Search style query string" do
       assert "This \\&& That" = Params.advanced_query("This && That")
     end
@@ -86,13 +84,11 @@ defmodule RorParamsTest do
       assert_raise RuntimeError, fn -> Params.query(nil) end
       assert_raise RuntimeError, fn -> Params.query("") end
       assert_raise RuntimeError, fn -> Params.query([]) end
-      assert_raise RuntimeError, fn -> Params.query([page: 4]) end
+      assert_raise RuntimeError, fn -> Params.query(page: 4) end
     end
-
   end
 
   describe "page/1" do
-
     test "returns a page number as a string if one has been specified with the page option" do
       assert "1" = Params.page("1")
     end
@@ -112,25 +108,19 @@ defmodule RorParamsTest do
     test "can extract the page from an atomic map or struct" do
       assert "6" = Params.page(%{page: "6"})
     end
-
   end
 
   describe "headers/1" do
-
     test "if :client_id option has been set, returns headers including ROR's client-id info" do
-
-      assert [{:client_id, ["testtest"]}] = Params.headers([client_id: "testtest"])
-
+      assert [{:client_id, ["testtest"]}] = Params.headers(client_id: "testtest")
     end
 
     test "if :client_id option has not been set, returns empty headers list" do
       assert [] = Params.headers([])
     end
-
   end
 
   describe "filter/1" do
-
     test "accepts a keyword list and returns a filter string" do
       assert "types:funder" = Params.filter(types: "funder")
     end
@@ -142,20 +132,17 @@ defmodule RorParamsTest do
     test "accepts a Filter struct and returns a string" do
       assert "types:funder" = Params.filter(%Filter{types: "funder"})
     end
-
   end
 
   describe "api_url/1" do
-
     test "returns the value of api_url key if one is set" do
-      assert "https://example.com/organizations" = Params.api_url([api_url: "https://example.com/organizations"])
+      assert "https://example.com/organizations" =
+               Params.api_url(api_url: "https://example.com/organizations")
     end
 
     test "otherwise returns nil" do
-      assert is_nil(Params.api_url([api_url: nil]))
+      assert is_nil(Params.api_url(api_url: nil))
       assert is_nil(Params.api_url([]))
     end
-
   end
-
 end

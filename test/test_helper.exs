@@ -1,4 +1,3 @@
 ExUnit.start()
 
-ExUnit.configure exclude: [:compatibility, :deprecated, :examples]
-
+ExUnit.configure(exclude: [:compatibility, :deprecated, :examples])

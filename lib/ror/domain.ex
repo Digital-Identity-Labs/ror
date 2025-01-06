@@ -1,21 +1,20 @@
 defmodule ROR.Domain do
-
   @moduledoc """
-  Functions for extracting and using Admin data from a ROR Organization record
+  Functions for extracting and using Domain data from a ROR Organization record
 
-
+  Domains are a list of strings.
   """
 
   @doc """
-  Extracts a XXX struct from the decoded JSON of a ROR Organization record
+  Extracts list of domain name strings from the decoded JSON of a ROR Organization record
 
   If you are retrieving records via the `ROR` module and the REST API you will not need to use this function yourself.
 
   ## Example
 
   iex> record = File.read!("test/support/static/example_org.json") |> Jason.decode!()
-  iex> ROR.Admin.extract(record)
-  %ROR.XXX{}
+  ...> ROR.Domain.extract(record)
+  ["universityofcalifornia.edu"]
 
   """
   @spec extract(data :: map()) :: list(binary())
@@ -35,5 +34,4 @@ defmodule ROR.Domain do
   def vocab do
     []
   end
-
 end

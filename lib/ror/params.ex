@@ -1,5 +1,4 @@
 defmodule ROR.Params do
-
   @moduledoc false
 
   alias ROR.Utils
@@ -7,17 +6,14 @@ defmodule ROR.Params do
 
   @spec generate(opts :: keyword()) :: keyword()
   def generate(opts) do
-
     filter = filter(opts[:filter])
 
     page = page(opts[:page])
 
     all_status = opts[:all_status]
 
-
     [filter: filter, page: page, all_status: all_status]
     |> Enum.reject(fn {_k, v} -> is_nil(v) end)
-
   end
 
   @spec query(value :: binary()) :: binary()
@@ -37,7 +33,7 @@ defmodule ROR.Params do
     query("#{value}")
   end
 
-  def query(value)  do
+  def query(_) do
     raise "Query string parameter was not actually a string!"
   end
 
@@ -58,7 +54,7 @@ defmodule ROR.Params do
     query("#{value}")
   end
 
-  def advanced_query(value)  do
+  def advanced_query(_) do
     raise "Query string parameter was not actually a string!"
   end
 
@@ -104,5 +100,4 @@ defmodule ROR.Params do
       nil
     end
   end
-
 end

@@ -1,6 +1,6 @@
 defimpl String.Chars, for: ROR.Admin do
   @moduledoc false
-  def to_string(s), do: Enum.join([s.created_at ,s.updated_at], ", ")
+  def to_string(s), do: Enum.join([s.created_at, s.updated_at], ", ")
 end
 
 defimpl String.Chars, for: ROR.ExternalID do

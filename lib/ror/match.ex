@@ -1,9 +1,8 @@
 defmodule ROR.Match do
-
   @moduledoc """
-  Functions for extracting and using Admin data from a ROR Organization record
+  Functions for extracting and using Match data from a ROR Organization record
 
-
+  Each Organization with a match from the `ROR.identify!/2` function is wrapped up in a Match struct
   """
 
   @enforce_keys [:organization]
@@ -11,24 +10,21 @@ defmodule ROR.Match do
   alias ROR.Organization
 
   @type t :: %__MODULE__{
-               organization: Organization.t(),
-               substring: binary(),
-               score: float(),
-               chosen: boolean,
-               matching_type: atom()
-             }
+          organization: Organization.t(),
+          substring: binary(),
+          score: float(),
+          chosen: boolean,
+          matching_type: atom()
+        }
 
-
-  defstruct [
-    organization: nil,
-    substring: nil,
-    score: 0.0,
-    chosen: false,
-    matching_type: nil
-  ]
+  defstruct organization: nil,
+            substring: nil,
+            score: 0.0,
+            chosen: false,
+            matching_type: nil
 
   @doc """
-  XX
+  Extracts Match records from the JSON returned by an affiliation API call
   """
   @spec extract(data :: map()) :: list(Match.t())
   def extract(data) do
@@ -38,13 +34,13 @@ defmodule ROR.Match do
         substring: d["substring"],
         score: d["score"],
         chosen: d["chosen"],
-        matching_type: mtype_to_atom(d["matching_type"]),
+        matching_type: mtype_to_atom(d["matching_type"])
       }
     end
   end
 
   @doc """
-  XX
+  List possible types of match
   """
   @spec vocab() :: list(atom())
   def vocab do
@@ -60,5 +56,4 @@ defmodule ROR.Match do
     |> String.replace(" ", "_")
     |> String.to_atom()
   end
-
 end

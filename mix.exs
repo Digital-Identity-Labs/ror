@@ -28,7 +28,6 @@ defmodule Ror.MixProject do
       {:jason, "~> 1.4"},
       {:iteraptor, "~> 1.14"},
       {:curl_req, "~> 0.98.0"},
-
       {:apex, "~> 1.2", only: [:dev, :test], runtime: false},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.14 and >= 0.14.4", only: [:dev, :test]},
@@ -40,7 +39,6 @@ defmodule Ror.MixProject do
       {:ex_json_schema, "~> 0.10.2", only: :test, runtime: false},
       {:observer_cli, "~> 1.7"},
       {:doctest_formatter, "~> 0.3.1", only: [:dev, :test], runtime: false}
-
     ]
   end
 end
