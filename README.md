@@ -11,7 +11,7 @@ Please read ROR's [terms of use](https://ror.org/about/terms/) and do not put ex
 
 [![Hex pm](http://img.shields.io/hexpm/v/ror.svg?style=flat)](https://hex.pm/packages/ror)
 [![API Docs](https://img.shields.io/badge/api-docs-yellow.svg?style=flat)](http://hexdocs.pm/ror/)
-![Github Elixir CI](https://github.com/Digital-Identity-Labs/ror/workflows/Elixir%20CI/badge.svg)
+![Github Elixir CI](https://github.com/Digital-Identity-Labs/ror/workflows/ElixirCI/badge.svg)
 
 [![Run in Livebook](https://livebook.dev/badge/v1/blue.svg)](https://livebook.dev/run?url=https%3A%2F%2Fraw.githubusercontent.com%2FDigital-Identity-Labs%2Fror%2Fmain%2Fror_notebook.livemd)
 
