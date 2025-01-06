@@ -1,6 +1,6 @@
 defmodule RorUtilsTest do
   use ExUnit.Case
-  
+
   alias ROR.Utils
 
   describe "escape_elastic/1" do

@@ -120,8 +120,9 @@ If you are comfortable working with Python but ROR's Elixir code is unfamiliar t
 
 Copyright (c) 2025 Digital Identity Ltd, UK
 
-ROR is MIT licensed.
+This software is MIT licensed.
 
 ## Disclaimer
 This Elixir ROR library is not endorsed by The Research Organization Registry (ROR)
+
 This software may change considerably in the first few releases after 0.1.0 - it is not yet stable!
