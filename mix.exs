@@ -44,11 +44,8 @@ defmodule Ror.MixProject do
   defp deps do
     [
       {:req, "~> 0.5.0"},
-      {:briefly, "~> 0.5.0"},
       {:castore, ">= 1.0.5"},
-      {:memoize, "~> 1.4"},
       {:jason, "~> 1.4"},
-      {:iteraptor, "~> 1.14"},
       {:curl_req, "~> 0.98.0"},
       {:apex, "~> 1.2", only: [:dev, :test], runtime: false},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
@@ -59,7 +56,6 @@ defmodule Ror.MixProject do
       {:dialyxir, "~> 1.4", only: [:dev], runtime: false},
       {:doctor, "~> 0.21", only: :dev, runtime: false},
       {:ex_json_schema, "~> 0.10.2", only: :test, runtime: false},
-      {:observer_cli, "~> 1.7"},
       {:doctest_formatter, "~> 0.3.1", only: [:dev, :test], runtime: false}
     ]
   end
