@@ -6,8 +6,30 @@ defmodule Ror.MixProject do
       app: :ror,
       version: "0.1.0",
       elixir: "~> 1.16",
+      description: "An unofficial API client for the Research Organization Registry (ROR)",
+      package: package(),
+      name: "ROR",
+      source_url: "https://github.com/Digital-Identity-Labs/ror",
+      build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      test_coverage: [
+        tool: ExCoveralls
+      ],
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
+      ],
+      docs: [
+        main: "readme",
+        logo: "logo.png",
+        extras: ["README.md", "LICENSE"]
+      ],
+      deps: deps(),
+      # Needed until issue fixed in Rambo
+      compilers: Mix.compilers(),
+      elixirc_paths: elixirc_paths(Mix.env())
     ]
   end
 
@@ -41,4 +63,17 @@ defmodule Ror.MixProject do
       {:doctest_formatter, "~> 0.3.1", only: [:dev, :test], runtime: false}
     ]
   end
+
+  defp package() do
+    [
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/Digital-Identity-Labs/ror"
+      }
+    ]
+  end
+
+  # Specifies which paths to compile per environment.
+  defp elixirc_paths(:test), do: ["lib", "test/support", "priv"]
+  defp elixirc_paths(_), do: ["lib", "priv"]
 end
