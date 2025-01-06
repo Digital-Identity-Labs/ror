@@ -120,7 +120,7 @@ If you are comfortable working with Python but ROR's Elixir code is unfamiliar t
 
 Copyright (c) 2025 Digital Identity Ltd, UK
 
-Smee is Apache 2.0 licensed.
+ROR is MIT licensed.
 
 ## Disclaimer
 This Elixir ROR library is not endorsed by The Research Organization Registry (ROR)
