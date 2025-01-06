@@ -1,16 +1,12 @@
 defmodule RorClientTest do
   use ExUnit.Case
 
-  @example_org_json File.read!("test/support/static/example_org.json")
-  @example_org_data Jason.decode!(@example_org_json)
-
   @full_id "https://ror.org/015w2mp89"
   @partial_id "ror.org/015w2mp89"
   @min_id "015w2mp89"
   @missing_id "015w2mp90"
   @invalid_id "xxxxxxxxxxxxxx"
 
-  alias ROR.Client, as: ThisModule
   alias ROR.Client
 
   describe "get!/2" do

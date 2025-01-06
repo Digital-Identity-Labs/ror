@@ -2,7 +2,6 @@ defmodule RorTest do
   use ExUnit.Case
   doctest ROR
 
-  alias ROR, as: ThisModule
   alias ROR
   alias ROR.Organization
   alias ROR.Results
