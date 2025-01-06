@@ -27,14 +27,14 @@ defmodule ROR.Name do
       iex> record = File.read!("test/support/static/example_org.json") |> Jason.decode!()
       ...> ROR.Name.extract(record)
       [
-      %ROR.Name{lang: "en", types: [:acronym], value: "UC"},
-      %ROR.Name{lang: "en", types: [:alias], value: "UC System"},
-      %ROR.Name{
-        lang: "en",
-        types: [:ror_display, :label],
-        value: "University of California System"
-      },
-      %ROR.Name{lang: "fr", types: [:label], value: "Université de Californie"}
+        %ROR.Name{lang: "en", types: [:acronym], value: "UC"},
+        %ROR.Name{lang: "en", types: [:alias], value: "UC System"},
+        %ROR.Name{
+          lang: "en",
+          types: [:ror_display, :label],
+          value: "University of California System"
+        },
+        %ROR.Name{lang: "fr", types: [:label], value: "Université de Californie"}
       ]
 
   """

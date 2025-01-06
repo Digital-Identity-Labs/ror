@@ -140,7 +140,10 @@ defmodule ROR.Client do
 
   ## Example
       iex> ROR.Client.query_advanced!("'Harvard University'", params: [page: "1"])
-      ...> ROR.Client.query_advanced!("names.value:Cornell AND locations.geonames_details.name:Ithaca")
+      ...> 
+      ...> ROR.Client.query_advanced!(
+      ...>   "names.value:Cornell AND locations.geonames_details.name:Ithaca"
+      ...> )
 
   """
   @spec query_advanced!(value :: binary(), opts :: keyword()) :: map()

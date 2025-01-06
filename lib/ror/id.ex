@@ -14,9 +14,9 @@ defmodule ROR.ID do
 
   ## Example
 
-  iex> record = File.read!("test/support/static/example_org.json") |> Jason.decode!()
-  ...> ROR.ID.extract(record)
-  "https://ror.org/00pjdza24"
+      iex> record = File.read!("test/support/static/example_org.json") |> Jason.decode!()
+      ...> ROR.ID.extract(record)
+      "https://ror.org/00pjdza24"
 
   """
   @spec extract(data :: map()) :: binary()

@@ -71,7 +71,7 @@ defmodule ROR.Filter do
   ## Example
 
       iex> ROR.Filter.new(types: "funder", country_code: "DE")
-      iex> |> ROR.Filter.to_ror_param()
+      ...> |> ROR.Filter.to_ror_param()
       "types:funder,locations.geonames_details.country_code:DE"
 
   """

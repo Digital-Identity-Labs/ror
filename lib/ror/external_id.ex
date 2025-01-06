@@ -23,22 +23,21 @@ defmodule ROR.ExternalID do
 
   ## Example
 
-  iex> record = File.read!("test/support/static/example_org.json") |> Jason.decode!()
-  ...> ROR.ExternalID.extract(record)
-  [
-  %ROR.ExternalID{
-    type: :fundref,
-    preferred: "100005595",
-    all: ["100005595", "100009350", "100004802", "100010574", "100005188",
-     "100005192"]
-  },
-  %ROR.ExternalID{
-    type: :grid,
-    preferred: "grid.30389.31",
-    all: ["grid.30389.31"]
-  },
-  %ROR.ExternalID{type: :isni, preferred: nil, all: ["0000 0001 2348 0690"]}
-  ]
+      iex> record = File.read!("test/support/static/example_org.json") |> Jason.decode!()
+      ...> ROR.ExternalID.extract(record)
+      [
+        %ROR.ExternalID{
+          type: :fundref,
+          preferred: "100005595",
+          all: ["100005595", "100009350", "100004802", "100010574", "100005188", "100005192"]
+        },
+        %ROR.ExternalID{
+          type: :grid,
+          preferred: "grid.30389.31",
+          all: ["grid.30389.31"]
+        },
+        %ROR.ExternalID{type: :isni, preferred: nil, all: ["0000 0001 2348 0690"]}
+      ]
 
   """
   @spec extract(data :: map()) :: list(ExternalID.t())

@@ -12,9 +12,9 @@ defmodule ROR.Domain do
 
   ## Example
 
-  iex> record = File.read!("test/support/static/example_org.json") |> Jason.decode!()
-  ...> ROR.Domain.extract(record)
-  ["universityofcalifornia.edu"]
+      iex> record = File.read!("test/support/static/example_org.json") |> Jason.decode!()
+      ...> ROR.Domain.extract(record)
+      ["universityofcalifornia.edu"]
 
   """
   @spec extract(data :: map()) :: list(binary())

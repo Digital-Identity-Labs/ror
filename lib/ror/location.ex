@@ -45,19 +45,19 @@ defmodule ROR.Location do
       iex> record = File.read!("test/support/static/example_org.json") |> Jason.decode!()
       ...> ROR.Location.extract(record)
       [
-      %ROR.Location{
-        type: :geonames,
-        id: 5378538,
-        continent_name: nil,
-        continent_code: nil,
-        country_code: "US",
-        country_name: "United States",
-        country_subdivision_code: nil,
-        country_subdivision_name: nil,
-        latitude: 37.802168,
-        longitude: -122.271281,
-        name: "Oakland"
-      }
+        %ROR.Location{
+          type: :geonames,
+          id: 5_378_538,
+          continent_name: nil,
+          continent_code: nil,
+          country_code: "US",
+          country_name: "United States",
+          country_subdivision_code: nil,
+          country_subdivision_name: nil,
+          latitude: 37.802168,
+          longitude: -122.271281,
+          name: "Oakland"
+        }
       ]
 
   """

@@ -22,15 +22,15 @@ defmodule ROR.Link do
 
   ## Example
 
-  iex> record = File.read!("test/support/static/example_org.json") |> Jason.decode!()
-  ...> ROR.Link.extract(record)
-  [
-  %ROR.Link{type: :website, value: "http://www.universityofcalifornia.edu/"},
-  %ROR.Link{
-    type: :wikipedia,
-    value: "http://en.wikipedia.org/wiki/University_of_California"
-  }
-  ]
+      iex> record = File.read!("test/support/static/example_org.json") |> Jason.decode!()
+      ...> ROR.Link.extract(record)
+      [
+        %ROR.Link{type: :website, value: "http://www.universityofcalifornia.edu/"},
+        %ROR.Link{
+          type: :wikipedia,
+          value: "http://en.wikipedia.org/wiki/University_of_California"
+        }
+      ]
 
   """
   @spec extract(data :: map()) :: list(Link.t())
