@@ -1,7 +1,6 @@
 # ROR
 
-`ROR` is an unofficial client for the [Research Organization Registry (ROR)](https://ror.org) API for Elixir, Erlang or 
-any other BEAM language.
+`ROR` is an unofficial client for the [Research Organization Registry (ROR)](https://ror.org) API for Elixir.
 
 > The Research Organization Registry (ROR) includes IDs and metadata for more than 110,000 organizations and counting.
 > Registry data is CC0 and openly available via a search interface, REST API, and data dump. Registry updates are curated
@@ -21,11 +20,12 @@ Please read ROR's [terms of use](https://ror.org/about/terms/) and do not put ex
 * Search and Quick Search based on names or record attributes
 * Paging and filters are supported
 * Match text to records, possibly identifying an organisation from existing data
-* Records are returned as typed structs (slight different to the ROR JSON responses, but containing all the information)
+* Records are returned as typed structs (slightly different to the ROR JSON responses, but containing all the information)
 * Client ID authentication is supported and optional
 * (This is an early version and only contains the basics so far)
 
 The top level `ROR` module contains functions for retrieving data from the API. Other ROR modules may not be needed at all.
+Other modules include:
 
 * `ROR.Client` presents a lower-level way to retrieve data, and returns maps based on the literal ROR JSON responses.
 * `ROR.Organization` contains a struct and utilities for the main ROR organization record
