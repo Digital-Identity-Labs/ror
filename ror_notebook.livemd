@@ -1,10 +1,53 @@
-<!-- livebook:{"app_settings":{"slug":"ror"}} -->
-
-# ROR Workbook
+# ROR
 
 ```elixir
 Mix.install([{:ror, ">= 0.1.0"}])
+Logger.configure(level: :info)
+alias ROR.{Admin,Client,Domain,ExternalID,Filter,ID,Link,Location,Match,Matches,Name,Organization,Relationship,Results,Status,Type}
 ```
 
+## Getting a record
 
-<!-- livebook:{"offset":2213,"stamp":{"token":"XCP.XD0OIaQH31Umc3ti7T6rrdtZl3yQ09S5EmpDPMiE0b_Hx451Ot5LoKTHdDetdniLncta61P7vTUCmkDEVJeEe9bbUEMT5v5vmMymJpehzMa01S54EpwJ4xo6","version":2}} -->
+
+
+```elixir
+org = ROR.get!("https://ror.org/04h699437")
+
+```
+
+## Listing Organizations
+
+```elixir
+results = ROR.list!(page: 2)
+```
+
+## Using Results
+
+```elixir
+results = ROR.list!(page: 1)
+Results.number_of_results(results)
+```
+
+```elixir
+results
+|> Enum.sort_by(&(&1.established), :asc)
+|> Enum.map(fn o -> "#{o.id} was established in #{o.established}" end)
+```
+
+## Quick Search/Queries
+
+```elixir
+results = ROR.quick_search!("Berlin")
+```
+
+## Advanced Search
+
+```elixir
+results = ROR.search!("names.value:Cornell AND locations.geonames_details.name:Ithaca")
+```
+
+## Chosen Organization Matches
+
+```elixir
+ROR.chosen_organization!("Department of Civil and Industrial Engineering, University of Pisa, Largo Lucio Lazzarino 2, Pisa 56126, Italy")
+```
